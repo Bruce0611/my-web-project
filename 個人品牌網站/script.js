@@ -23,24 +23,42 @@ const translations = {
         proj_2_title: "High-Fidelity CFD Simulation and Aerodynamic Optimization Platform for Tall Buildings", proj_2_desc: "Utilizes Large Eddy Simulation (LES) technology to reconstruct complex atmospheric boundary layer flow fields, providing deep analysis of surface pressure distribution and wake structures. Validates the efficacy of various aerodynamic optimization measures through numerical simulation, offering high-precision data support for wind-resistant design.",
         btn_view_project: "View Project Details",
         exp_title: "Experience",
-        exp_1_role: "Civil Engineer", exp_1_meta: "2022 - Present | ABC Engineering Consultants",
-        exp_1_desc: "<li>Responsible for large-scale structural design/analysis (15+ projects).</li><li>Implemented AI tools improving design efficiency by 30%.</li><li>Optimized BIM workflow reducing communication costs.</li>",
-        exp_2_role: "Research Assistant", exp_2_meta: "2020 - 2022 | XYZ University Wind Engineering Center",
-        exp_2_desc: "<li>Conducted CFD simulations and wind tunnel tests (3 papers published).</li><li>Developed Python automation scripts reducing analysis time by 50%.</li>",
+
+        // Exp 5 (Top)
+        exp_5_role: "Teaching Assistant: Mechanics of Materials", exp_5_meta: "2025 – 2026 | Tamkang University",
+        exp_5_desc: "<p>• Streamlined instructional workflows by implementing <span class='text-neon-cyan font-semibold'>Standard Operating Procedures (SOPs)</span>, significantly enhancing teaching efficiency and resource management.</p><p>• Visualized complex mechanical concepts through real-world case studies <span class='text-neon-cyan font-semibold'>(Simplifying Complex Concepts)</span>, boosting student comprehension and logical reasoning skills.</p>",
+
+        // Exp 4
+        exp_4_role: "Resident Performer (Lead Vocalist)", exp_4_meta: "2024 – 2025 | Golden Tulip Fab Hotel New Taipei",
+        exp_4_desc: "<p>• Delivered high-stakes live performances, demonstrating exceptional <span class='text-neon-cyan font-semibold'>Resilience</span> and professional <span class='text-neon-cyan font-semibold'>Public Speaking</span> skills in a fast-paced hospitality environment.</p><p>• Cultivated <span class='text-neon-cyan font-semibold'>Strategic Networking</span> and engaged with high-profile stakeholders during large-scale corporate events.</p>",
+        exp_4_award: '<a href="https://www.youtube.com" target="_blank" class="inline-flex items-center text-yellow-400 hover:text-yellow-300 text-sm font-bold transition-colors"><i class="fa-solid fa-trophy mr-2"></i> Award: Champion, Hwei-Zai Star Singing Competition (2025).</a>',
+
+        // Exp 3
+        exp_3_role: "International Student Basketball Coach", exp_3_meta: "2021 – 2025 | Taipei American School",
+        exp_3_desc: "<p>• Facilitated <span class='text-neon-cyan font-semibold'>English-Only Instruction</span> for diverse groups, fostering <span class='text-neon-cyan font-semibold'>Cross-cultural Communication</span> and an inclusive learning environment.</p><p>• Cultivated a culture of <span class='text-neon-cyan font-semibold'>Accountability</span> and team synergy, designing collaborative mechanisms that improved overall team performance.</p>",
+
+        // Exp 2
+        exp_2_role: "Gymnastics Coach & Event Coordinator", exp_2_meta: "2018 – Present | Senior Home Care Center",
+        exp_2_desc: "<p>• Orchestrated the planning and execution of outdoor activities with a rigorous focus on <span class='text-neon-cyan font-semibold'>Risk Mitigation</span> and process control <span class='text-neon-cyan font-semibold'>(Project Execution)</span>.</p><p>• Optimized curriculum experiences for senior citizens, showcasing advanced <span class='text-neon-cyan font-semibold'>Stakeholder Communication</span> and empathy-driven service design.</p>",
+
+        // Exp 1
+        exp_1_role: "Assistant Basketball Coach", exp_1_meta: "2018 – 2019 | THUHS Basketball Team",
+        exp_1_desc: "<p>• Implemented <span class='text-neon-cyan font-semibold'>Data-driven Analytics</span> to evaluate player strengths, achieving <span class='text-neon-cyan font-semibold'>Role Optimization</span> through strategic positioning.</p><p>• Standardized training protocols (SOPs) to bolster team operational efficiency and tactical execution.</p>",
+        exp_1_award: '<a href="https://www.facebook.com" target="_blank" class="inline-flex items-center text-yellow-400 hover:text-yellow-300 text-sm font-bold transition-colors"><i class="fa-solid fa-trophy mr-2"></i> Award: Champion, Taichung Xitun District Chairman\'s Cup Basketball Tournament (2020).</a>',
 
         // --- Updated Education (English) ---
         edu_title: "Education",
-        edu_1_degree: "M.S. Civil Engineering (Wind Tunnel Group)",
+        edu_1_degree: "M.S. Civil Engineering<br> (Wind Tunnel Group)",
         edu_1_school: "Tamkang University | 2025 - 2026",
-        edu_1_desc: "Research: Flow Control and Vibration Optimization System | GPA: 4.0/4.0",
+        edu_1_desc: "Research: Flow Control and Vibration Optimization System",
 
         edu_2_degree: "B.S. Civil Engineering",
         edu_2_school: "Tamkang University | 2021 - 2025",
-        edu_2_desc: "Pop Dance Club Art Designer, Project Competition Winner | GPA: 3.45/4.0",
+        edu_2_desc: "Pop Dance Club Art Designer, Project Competition Winner",
         // ---------------------------
 
         certs_title: "Certifications", cert_1_name: "NVIDIA Deep Learning Certification", cert_1_desc: "Deep Learning Technology", cert_2_name: "GOOGLE SKILL Certification", cert_2_desc: "National Examination Qualified",
-        interests_title: "Achievements", int_1_name: "Singing Contest", int_1_rank: "1st Place (2025)", int_2_name: "Basketball Cup", int_2_rank: "Champion (2020)",
+        interests_title: "Achievements", int_1_name: "Hwei-Zai Star Singing", int_1_rank: "1st Place (2025)", int_2_name: "Taichung Xitun District Chairman's Cup", int_2_rank: "Champion (2020)",
         footer_title: "Let's Work Together", footer_desc: "Feel free to contact me for collaboration or technical exchange."
     },
     zh: {
@@ -66,10 +84,28 @@ const translations = {
         proj_2_title: "高精度 CFD 建築流場模擬與空氣動力優化平台", proj_2_desc: "運用大渦模擬 ($LES$) 技術重建複雜大氣邊界層流場，深度解析建築物表面的壓力分布與尾流結構。透過數值模擬驗證各種氣動優化手段之功效，為抗風設計提供高精確度的數據支撐。",
         btn_view_project: "查看專案詳情",
         exp_title: "工作經驗",
-        exp_1_role: "土木工程師", exp_1_meta: "2022 - Present | ABC 工程顧問公司",
-        exp_1_desc: "<li>負責大型建築結構設計與分析，累積完成 15+ 專案。</li><li>導入 AI 輔助設計工具，提升團隊設計效率 30%。</li><li>優化 BIM 協作流程，大幅降低跨部門溝通成本。</li>",
-        exp_2_role: "研究助理", exp_2_meta: "2020 - 2022 | XYZ 大學風工程中心",
-        exp_2_desc: "<li>執行 CFD 模擬與風洞實驗，發表 3 篇學術論文。</li><li>開發 Python 自動化數據處理腳本，縮短分析時間 50%。</li>",
+
+        // Exp 5 (Top)
+        exp_5_role: "材料力學助教", exp_5_meta: "2025 – 2026 | 淡江大學",
+        exp_5_desc: "<p>• 建立標準化教學流程 (SOP)，優化授課效率。</p><p>• 運用實例將 <span class='text-neon-cyan font-semibold'>複雜概念視覺化 (Simplifying Complex Concepts)</span>，提升學生邏輯理解力。</p>",
+
+        // Exp 4
+        exp_4_role: "駐唱表演嘉賓", exp_4_meta: "2024 – 2025 | 淡水將捷金鬱金香酒店",
+        exp_4_desc: "<p>• 在高壓環境下進行現場演出，具備卓越的 <span class='text-neon-cyan font-semibold'>抗壓性與公開演說 (Public Speaking)</span> 能力。</p><p>• 透過大型活動經營商業人脈。</p>",
+        exp_4_award: '<a href="https://www.youtube.com" target="_blank" class="inline-flex items-center text-yellow-400 hover:text-yellow-300 text-sm font-bold transition-colors"><i class="fa-solid fa-trophy mr-2"></i> 滬尾之星歌唱組 —— 第一名 (2025)</a>',
+
+        // Exp 3
+        exp_3_role: "國際學生籃球教練", exp_3_meta: "2021 – 2025 | 天母美國學校",
+        exp_3_desc: "<p>• 執行 <span class='text-neon-cyan font-semibold'>全英語授課 (English-Only Instruction)</span>，具備流暢的跨文化溝通能力。</p><p>• 培養學生 <span class='text-neon-cyan font-semibold'>自主當責 (Accountability)</span> 態度，建立團隊協作機制。</p>",
+
+        // Exp 2
+        exp_2_role: "體操教練 & 活動策劃", exp_2_meta: "2018 – Present | 金老時居家護理所",
+        exp_2_desc: "<p>• 負責戶外活動的 <span class='text-neon-cyan font-semibold'>專案規劃與執行 (Project Execution)</span>，確保流程風險控管。</p><p>• 針對高齡使用者優化課程體驗，展現 <span class='text-neon-cyan font-semibold'>用戶溝通 (Stakeholder Comm)</span> 能力。</p>",
+
+        // Exp 1
+        exp_1_role: "籃球助教", exp_1_meta: "2018 – 2019 | 東大附中籃球隊",
+        exp_1_desc: "<p>• 導入數據化思維，分析球員優勢進行 <span class='text-neon-cyan font-semibold'>位置配置最佳化 (Role Optimization)</span>。</p><p>• 協助制定訓練 SOP，提升團隊執行效率。</p>",
+        exp_1_award: '<a href="https://www.facebook.com" target="_blank" class="inline-flex items-center text-yellow-400 hover:text-yellow-300 text-sm font-bold transition-colors"><i class="fa-solid fa-trophy mr-2"></i> 台中市西屯主委盃籃球賽 —— 第一名 (2020)</a>',
 
         // --- Updated Education (Chinese) ---
         edu_title: "教育背景",
@@ -83,7 +119,7 @@ const translations = {
         // ---------------------------
 
         certs_title: "專業認證", cert_1_name: "NVIDIA 深度學習認證", cert_1_desc: "深度學習技術認證", cert_2_name: "GOOGLE SKILL 認證", cert_2_desc: "國家高考及格",
-        interests_title: "個人成就", int_1_name: "派尾之星歌唱組", int_1_rank: "第一名 (2025)", int_2_name: "西屯主委盃籃球", int_2_rank: "冠軍 (2020)",
+        interests_title: "個人成就", int_1_name: "滬尾之星歌唱組", int_1_rank: "第一名 (2025)", int_2_name: "西屯主委盃籃球", int_2_rank: "冠軍 (2020)",
         footer_title: "開始我們的合作", footer_desc: "無論是工程專案合作還是技術交流，歡迎隨時聯繫。"
     }
 };
