@@ -6,7 +6,7 @@ const translations = {
         nav_interests: "Interests", nav_contact: "Contact Me",
         hero_badge: "Hello, World! I'm Bruce",
         hero_title_1: "Cross-domain Engineering", hero_title_2: "AI Tech Expert",
-        hero_desc: "Expert in multi-source data analysis and machine learning to solve complex engineering challenges. Creating smarter solutions bridging technology and physical principles.",
+        hero_desc: "Innovative R&D Engineer bridging the gap between physical engineering and AI. Expert in CFD simulation and high-precision sensor calibration in wind tunnel experiments. Leveraged Python/MATLAB to develop custom PSD and vibration analysis tools, and led optimization projects that resulted in a 32% drag reduction. Holder of Professional AI certificates issued by NVIDIA/Google, I aim to utilize N8N and Claude Skills to construct highly optimized R&D workflows, customizing AI Agents to achieve end-to-end automation from raw data to technical insights and decision-making suggestions. A collaborative problem-solver committed to improving manufacturing yield through data-driven precision.",
         about_title: "About Me",
         about_c1_title: "Cross-domain Integration", about_c1_desc: "Seamlessly integrating knowledge from Civil Engineering to AI technology to build unique competitiveness.",
         about_c2_title: "Innovative Thinking", about_c2_desc: "Utilizing innovative thinking and technical tools to effectively solve complex engineering challenges and improve work efficiency.",
@@ -49,7 +49,7 @@ const translations = {
         nav_interests: "個人興趣", nav_contact: "聯絡我",
         hero_badge: "Hello, World! I'm Bruce",
         hero_title_1: "跨領域工程", hero_title_2: "AI 技術專家",
-        hero_desc: "擅長運用多源數據分析與機器學習，解決複雜工程挑戰。<br>持續推動科技與工程的融合，致力於創造更智慧的解決方案。",
+        hero_desc: "具備土木底蘊與 AI 跨域實力的研發工程師，擅長將 CFD 與結構振動問題透過 BigQuery 轉化為大規模分析模型 。曾主導格柵優化專案，達成 25.5% 擾動降幅與 32% 減阻成效，具備將數值模擬導入 ML 進行自動化分析的核心實力 。<br><br>持有 NVIDIA 與 Google Cloud 專業認證 ，精通運用 BigQuery ML 處理海量實驗數據並縮短特徵提取週期 。熟練 Docker 與 GKE 容器化部署 ，能將預測模型轉化為高可用服務，符合 MLOps 監控需求 。具備 LLM 服務化基礎，能利用 Prompt 與 Agent 框架開發工程數據轉譯助手 ，實現從原始數據到技術洞察的端到端自動化 。<br><br>致力於將 AI 導入工程工作流，憑藉嚴謹邏輯與溝通轉譯能力，為製程穩定與良率提升提供精準洞察，是具備開發下一代 AI 系統實力的高效協作者 。",
         about_title: "關於我",
         about_c1_title: "跨領域整合", about_c1_desc: "從土木工程到 AI 技術，無縫整合不同領域知識，打造獨特競爭力。",
         about_c2_title: "創新思維", about_c2_desc: "運用創新思維與技術工具，有效解決複雜的工程與技術挑戰，提升工作效率。",
@@ -185,7 +185,7 @@ if (canvas) {
         }
         draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fillStyle = this.c; ctx.fill(); }
     }
-    for (let i = 0; i < 100; i++) particles.push(new P());
+    for (let i = 0; i < 200; i++) particles.push(new P());
 
     function animate() {
         ctx.fillStyle = 'rgba(11, 12, 16, 0.1)'; ctx.fillRect(0, 0, w, h);
