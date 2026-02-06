@@ -16,7 +16,10 @@
                         'neon-cyan': '#66FCF1',
                         'neon-dim': '#45A29E',
                         'brand-ig': '#E1306C',
+                        'brand-ig': '#E1306C',
                         'brand-yt': '#FF0000',
+                        'brand-li': '#0077b5',
+                        'brand-gh': '#333333',
                     },
                     fontFamily: {
                         sans: ['Noto Sans TC', 'Inter', 'sans-serif'],
@@ -127,13 +130,25 @@
                         持續推動科技與工程的融合，致力於創造更智慧的解決方案。
                     </p>
 
-                    <div class="flex flex-wrap gap-4 opacity-0 animate-fade-in-up delay-300">
+                    <div class="grid grid-cols-2 gap-4 opacity-0 animate-fade-in-up delay-300">
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/kuo-cheng-an-2a4854371/" target="_blank"
+                            class="w-full justify-center flex items-center gap-2 px-6 py-3 bg-[#0077b5] text-white font-bold rounded-full hover:scale-110 hover:shadow-[0_0_20px_rgba(0,119,181,0.6)] transition-all duration-300">
+                            <i class="fa-brands fa-linkedin text-xl"></i> LinkedIn
+                        </a>
+                        <!-- GitHub -->
+                        <a href="https://github.com/Bruce0611?tab=repositories" target="_blank"
+                            class="w-full justify-center flex items-center gap-2 px-6 py-3 bg-[#333] text-white font-bold rounded-full hover:scale-110 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300">
+                            <i class="fa-brands fa-github text-xl"></i> GitHub
+                        </a>
+                        <!-- Instagram -->
                         <a href="https://www.instagram.com/scl_hin_11/" target="_blank"
-                            class="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-gray-800 to-brand-ig text-white font-bold rounded hover:opacity-90 hover:scale-105 transition-all shadow-lg">
+                            class="w-full justify-center flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white font-bold rounded-full hover:scale-110 hover:shadow-[0_0_20px_rgba(225,48,108,0.6)] transition-all duration-300">
                             <i class="fa-brands fa-instagram text-xl"></i> Instagram
                         </a>
+                        <!-- YouTube -->
                         <a href="https://www.youtube.com/@scl_hin_11/videos" target="_blank"
-                            class="flex items-center gap-2 px-8 py-3 bg-brand-yt text-white font-bold rounded hover:bg-red-700 hover:scale-105 transition-all shadow-lg">
+                            class="w-full justify-center flex items-center gap-2 px-6 py-3 bg-[#FF0000] text-white font-bold rounded-full hover:scale-110 hover:shadow-[0_0_20px_rgba(255,0,0,0.6)] transition-all duration-300">
                             <i class="fa-brands fa-youtube text-xl"></i> YouTube
                         </a>
                     </div>
@@ -156,10 +171,7 @@
                                 style="object-position: center 35%;">
                         </div>
 
-                        <div
-                            class="absolute -bottom-4 right-10 bg-tech-dark border border-neon-cyan text-neon-cyan px-4 py-2 rounded font-mono text-sm font-bold shadow-lg animate-bounce">
-                            <i class="fa-solid fa-code"></i> Developer
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -541,14 +553,17 @@
             </div>
 
             <div class="flex justify-center gap-8 text-2xl text-gray-500 mb-8">
-                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="hover:text-blue-500 transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Bruce0611?tab=repositories" target="_blank"
+                    class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kuo-cheng-an-2a4854371/" target="_blank"
+                    class="hover:text-blue-500 transition"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://www.instagram.com/scl_hin_11/" target="_blank"
                     class="hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@scl_hin_11/videos" target="_blank"
+                    class="hover:text-red-500 transition"><i class="fa-brands fa-youtube"></i></a>
             </div>
 
-            <p class="text-xs text-gray-700 font-mono">© 2025 Bruce Kuo. Designed with <span
-                    class="text-red-500">♥</span> & Code.</p>
+
         </div>
     </footer>
     <script src="script.js"></script>
