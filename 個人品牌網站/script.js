@@ -61,7 +61,42 @@ const translations = {
         edu_2_desc: "Pop Dance Club Art Designer, Project Competition Winner",
         // ---------------------------
 
-        certs_title: "Certifications", cert_1_name: "NVIDIA Deep Learning Certification", cert_1_desc: "Deep Learning Technology", cert_2_name: "GOOGLE SKILL Certification", cert_2_desc: "Google Cloud Skills Certification", cert_3_name: "National Examination Qualified", cert_3_desc: "Civil Engineering (exact title TBD)",
+        certs_title: "Certifications",
+
+        cert_nvidia_name: "NVIDIA Deep Learning Certification",
+        cert_nvidia_summary: "4 official certificates · 16 courses completed",
+        cert_nvidia_h1: "Official Certificates (Certificate of Competency)",
+        cert_nvidia_list1: "<li>Building Transformer-Based Natural Language Processing Applications — 2026/06/11</li><li>Getting Started with Deep Learning — 2026/05/30</li><li>Getting Started with AI on Jetson Nano — 2025/09/20</li><li>Disaster Risk Monitoring Using Satellite Imagery (NVIDIA × UNITAR/UNOSAT) — 2025/10/05</li>",
+        cert_nvidia_h2: "100% Course Completion · Isaac Sim / ROS Series (no separate certificate)",
+        cert_nvidia_h3: "NVIDIA DLI Short Course Completions (100% complete, no individual certificate issued)",
+
+        cert_google_name: "GOOGLE SKILL Certification",
+        cert_google_summary: "2 certificates of completion · 72 certifications & courses",
+        cert_google_h1: "Google Career Certificates Program · Certificates of Completion",
+        cert_google_list1: "<li>AI for Generalists — Certificate of Completion (ID 1OCR2FFD)</li><li>Google Cloud — Certificate of Completion (ID 1OCR2FFD)</li>",
+        cert_google_h2: "Google Cloud Skill Badges (Credly-verified)",
+        cert_google_h3: "Google Cloud Skills Boost — \"My Learning\" Completions",
+        cert_google_note: "68 completed courses/badges (Oct 2025 – Jun 2026), spanning the official Skill Wallet tags below:",
+        cert_google_h4: "Other Google Certifications",
+        cert_google_list4: "<li>AI-Powered Performance Certification (Google Ads) — Google (Skillshop), issued 2026/06/25, expires 2027/06/25</li><li>Getting Started with Google Kubernetes Engine — iSpan × Google Cloud, Taipei, 2025/11/06</li>",
+
+        cert_anthropic_name: "ANTHROPIC ACADEMY Certification",
+        cert_anthropic_summary: "2 official courses completed",
+        cert_anthropic_note: "Anthropic Academy course completions (no public downloadable certificate page on the platform):",
+
+        cert_mathworks_name: "MATHWORKS Certification",
+        cert_mathworks_summary: "1 course certificate",
+        cert_mathworks_list: "<li>Deep Learning Onramp — MathWorks Training Services, 100% completed, 2025/08/16</li>",
+
+        cert_tku_name: "Tamkang University AI Innovation College Training Certificates",
+        cert_tku_summary: "2 training certificates",
+        cert_tku_list: "<li>[AI-102] Microsoft-Certified Online Course: How to Become an Azure AI Engineer? — 6-hour training, 2026/06/18, Doc No. 11420012</li><li>[AI Hands-on Workshop]: Multimodal AI Applications — 2-hour training, 2026/06/18, Doc No. 11420272</li>",
+
+        cert_other_name: "Other Institutional Courses",
+        cert_other_summary: "2 certificates of completion",
+        cert_other_list: "<li>Institute for Information Industry (III) Certificate of Completion: \"Riding the AI Wave – Introduction to Google AI Applications\" (organized by Taipei City Dept. of Youth Affairs, 15 hours, 2025/06/14–15, Certificate No. (114)TPYDIII NO.148)</li><li>AI Business Applications & Smart Education Platform Workshop — Certificate of Completion, 7 hours, completed 2025/12/18, Certificate No. TB00032</li>",
+
+        cert_3_name: "National Examination Qualified", cert_3_desc: "Civil Engineering (exact title TBD)",
         interests_title: "Achievements", int_1_name: "Hwei-Zai Star Singing", int_1_rank: "1st Place (2025)", int_2_name: "Taichung Xitun District Chairman's Cup", int_2_rank: "Champion (2020)",
         footer_title: "Let's Work Together", footer_desc: "Feel free to contact me for collaboration or technical exchange."
     },
@@ -126,7 +161,42 @@ const translations = {
         edu_2_desc: "熱舞社美軒、專題競賽優勝",
         // ---------------------------
 
-        certs_title: "專業認證", cert_1_name: "NVIDIA 深度學習認證", cert_1_desc: "深度學習技術認證", cert_2_name: "GOOGLE SKILL 認證", cert_2_desc: "Google Cloud 技能認證", cert_3_name: "國家考試及格", cert_3_desc: "土木工程科（詳細名稱待確認）",
+        certs_title: "專業認證",
+
+        cert_nvidia_name: "NVIDIA 深度學習認證",
+        cert_nvidia_summary: "4 張正式證書．16 門課程完課",
+        cert_nvidia_h1: "正式證書（Certificate of Competency）",
+        cert_nvidia_list1: "<li>建造以 Transformer 為基礎的自然語言處理應用 — 2026/06/11</li><li>Getting Started with Deep Learning — 2026/05/30</li><li>Getting Started with AI on Jetson Nano — 2025/09/20</li><li>Disaster Risk Monitoring Using Satellite Imagery（NVIDIA × UNITAR/UNOSAT）— 2025/10/05</li>",
+        cert_nvidia_h2: "100% 完課紀錄．Isaac Sim / ROS 系列（無獨立證書）",
+        cert_nvidia_h3: "NVIDIA DLI 短課完課紀錄（100% 完課，平台未核發個別證書）",
+
+        cert_google_name: "GOOGLE SKILL 認證",
+        cert_google_summary: "2 張結業證書．72 項認證與課程紀錄",
+        cert_google_h1: "Google 數位人才探索計畫．結業證書",
+        cert_google_list1: "<li>AI 職場通識學程結業證書（AI for Generalists）— 證書編號 1OCR2FFD</li><li>Google Cloud 學程結業證書 — 證書編號 1OCR2FFD</li>",
+        cert_google_h2: "Google Cloud Skill Badge（Credly 可驗證徽章）",
+        cert_google_h3: "Google Cloud Skills Boost「My Learning」已完成課程",
+        cert_google_note: "共 68 項已完成課程／徽章（2025/10 – 2026/06），涵蓋官方技能標籤（Skill Wallet）：",
+        cert_google_h4: "其他 Google 認證",
+        cert_google_list4: "<li>AI 技術輔助高效廣告認證（Google Ads AI-Powered Performance）— Google (Skillshop)，發證 2026/06/25，效期至 2027/06/25</li><li>Getting Started with Google Kubernetes Engine — iSpan × Google Cloud，台北，2025/11/06</li>",
+
+        cert_anthropic_name: "ANTHROPIC ACADEMY 認證",
+        cert_anthropic_summary: "2 門官方課程完課",
+        cert_anthropic_note: "Anthropic Academy 完課紀錄（官方平台目前無公開可下載之證書頁面）：",
+
+        cert_mathworks_name: "MATHWORKS 認證",
+        cert_mathworks_summary: "1 張課程證書",
+        cert_mathworks_list: "<li>Deep Learning Onramp — MathWorks Training Services，100% 完課，2025/08/16</li>",
+
+        cert_tku_name: "淡江大學 AI 創智學院研習證明",
+        cert_tku_summary: "2 張研習證明",
+        cert_tku_list: "<li>【AI-102】微軟認證線上課程：如何成為 Azure AI 工程師？— 6 小時研習，2026/06/18，院字第11420012號</li><li>【AI 實作體驗工作坊】：多模態 AI 應用 — 2 小時研習，2026/06/18，院字第11420272號</li>",
+
+        cert_other_name: "其他機構課程",
+        cert_other_summary: "2 張結業／完訓證書",
+        cert_other_list: "<li>財團法人資訊工業策進會結業證書：駕馭 AI 新浪潮－Google AI 的應用入門（臺北市政府青年局主辦，15 小時，2025/06/14–15，證書號碼(114)TPYDIII NO.148）</li><li>AI 商務應用與智慧教育平台推廣工作坊完訓證書 — 7 小時，完成日期 2025/12/18，證書編號 TB00032</li>",
+
+        cert_3_name: "國家考試及格", cert_3_desc: "土木工程科（詳細名稱待確認）",
         interests_title: "個人成就", int_1_name: "滬尾之星歌唱組", int_1_rank: "第一名 (2025)", int_2_name: "西屯主委盃籃球", int_2_rank: "冠軍 (2020)",
         footer_title: "開始我們的合作", footer_desc: "無論是工程專案合作還是技術交流，歡迎隨時聯繫。"
     }
@@ -182,9 +252,9 @@ function closeMobileMenu() {
     btn.setAttribute('aria-expanded', 'false');
 }
 
-// --- 專案詳情 Modal ---
-function openProjectModal(id) {
-    document.querySelectorAll('.project-modal').forEach(m => m.classList.add('hidden'));
+// --- 詳情 Modal（專案 / 認證共用）---
+function openDetailModal(id) {
+    document.querySelectorAll('.detail-modal').forEach(m => m.classList.add('hidden'));
     document.getElementById(id).classList.remove('hidden');
     const overlay = document.getElementById('modal-overlay');
     overlay.classList.remove('hidden');
@@ -192,7 +262,7 @@ function openProjectModal(id) {
     document.body.style.overflow = 'hidden';
 }
 
-function closeProjectModal(e) {
+function closeDetailModal(e) {
     if (e && e.target !== e.currentTarget) return;
     const overlay = document.getElementById('modal-overlay');
     overlay.classList.add('hidden');
@@ -201,7 +271,7 @@ function closeProjectModal(e) {
 }
 
 window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeProjectModal();
+    if (e.key === 'Escape') closeDetailModal();
 });
 
 // --- 初始化 ---

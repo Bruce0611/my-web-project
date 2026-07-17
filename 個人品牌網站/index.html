@@ -332,8 +332,8 @@
                 <!-- Project 1 -->
                 <!-- TODO: 待碩士論文區塊(#thesis)完成後，將本卡片改為連到 #thesis -->
                 <div class="glass-card p-0 rounded-2xl overflow-hidden group block cursor-pointer" role="button"
-                    tabindex="0" onclick="openProjectModal('modal-proj1')"
-                    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openProjectModal('modal-proj1');}">
+                    tabindex="0" onclick="openDetailModal('modal-proj1')"
+                    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDetailModal('modal-proj1');}">
                     <div class="h-48 bg-gray-800 relative overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0B0C10] to-transparent z-10"></div>
                         <div
@@ -350,7 +350,7 @@
                         </p>
                         <button type="button"
                             class="inline-flex items-center text-white text-sm font-bold border-b border-neon-cyan pb-1 hover:text-neon-cyan transition"
-                            onclick="event.stopPropagation(); openProjectModal('modal-proj1')">
+                            onclick="event.stopPropagation(); openDetailModal('modal-proj1')">
                             <span data-i18n="btn_view_project">查看專案詳情</span> <i
                                 class="fa-solid fa-arrow-right ml-2"></i>
                         </button>
@@ -359,8 +359,8 @@
 
                 <!-- Project 2 -->
                 <div class="glass-card p-0 rounded-2xl overflow-hidden group block cursor-pointer" role="button"
-                    tabindex="0" onclick="openProjectModal('modal-proj2')"
-                    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openProjectModal('modal-proj2');}">
+                    tabindex="0" onclick="openDetailModal('modal-proj2')"
+                    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDetailModal('modal-proj2');}">
                     <div class="h-48 bg-gray-800 relative overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0B0C10] to-transparent z-10"></div>
                         <div
@@ -377,7 +377,7 @@
                         </p>
                         <button type="button"
                             class="inline-flex items-center text-white text-sm font-bold border-b border-neon-cyan pb-1 hover:text-neon-cyan transition"
-                            onclick="event.stopPropagation(); openProjectModal('modal-proj2')">
+                            onclick="event.stopPropagation(); openDetailModal('modal-proj2')">
                             <span data-i18n="btn_view_project">查看專案詳情</span> <i
                                 class="fa-solid fa-arrow-right ml-2"></i>
                         </button>
@@ -386,14 +386,14 @@
             </div>
         </section>
 
-        <!-- 專案詳情 Modal -->
+        <!-- 詳情 Modal（專案作品／專業認證共用）-->
         <div id="modal-overlay" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-sm px-4"
-            onclick="closeProjectModal(event)">
+            onclick="closeDetailModal(event)">
             <div id="modal-proj1"
-                class="project-modal hidden glass-card bg-[#12161c] max-w-2xl w-full rounded-2xl p-8 relative max-h-[85vh] overflow-y-auto"
+                class="detail-modal hidden glass-card bg-[#12161c] max-w-2xl w-full rounded-2xl p-8 relative max-h-[85vh] overflow-y-auto"
                 onclick="event.stopPropagation()">
                 <button type="button" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl leading-none"
-                    onclick="closeProjectModal()" aria-label="Close">&times;</button>
+                    onclick="closeDetailModal()" aria-label="Close">&times;</button>
                 <h3 class="text-2xl font-bold text-white mb-6 pr-8" data-i18n="proj_1_title">智慧型建築風振控制與結構性能優化系統</h3>
                 <div class="grid grid-cols-2 gap-4 mb-6">
                     <div class="glass-card p-4 rounded-xl text-center">
@@ -412,15 +412,183 @@
                 <!-- TODO: 待碩士論文區塊(#thesis)完成後，於此補上連到 #thesis 的按鈕 -->
             </div>
             <div id="modal-proj2"
-                class="project-modal hidden glass-card bg-[#12161c] max-w-2xl w-full rounded-2xl p-8 relative max-h-[85vh] overflow-y-auto"
+                class="detail-modal hidden glass-card bg-[#12161c] max-w-2xl w-full rounded-2xl p-8 relative max-h-[85vh] overflow-y-auto"
                 onclick="event.stopPropagation()">
                 <button type="button" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl leading-none"
-                    onclick="closeProjectModal()" aria-label="Close">&times;</button>
+                    onclick="closeDetailModal()" aria-label="Close">&times;</button>
                 <h3 class="text-2xl font-bold text-white mb-6 pr-8" data-i18n="proj_2_title">高精度 CFD 建築流場模擬與空氣動力優化平台</h3>
                 <ul class="text-gray-300 text-sm space-y-3 leading-relaxed list-disc pl-5" data-i18n="proj_2_modal_points">
                     <li>運用大渦模擬 (LES) 技術重建複雜大氣邊界層流場。</li>
                     <li>深度解析建築物表面的壓力分布與尾流結構。</li>
                     <li>透過數值模擬驗證各種氣動優化手段之功效，為抗風設計提供高精確度的數據支撐。</li>
+                </ul>
+            </div>
+
+            <!-- Cert: NVIDIA -->
+            <div id="modal-cert-nvidia"
+                class="detail-modal hidden glass-card bg-[#12161c] max-w-2xl w-full rounded-2xl p-8 relative max-h-[85vh] overflow-y-auto"
+                onclick="event.stopPropagation()">
+                <button type="button" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl leading-none"
+                    onclick="closeDetailModal()" aria-label="Close">&times;</button>
+                <h3 class="text-2xl font-bold text-white mb-6 pr-8" data-i18n="cert_nvidia_name">NVIDIA 深度學習認證</h3>
+                <div class="mb-6">
+                    <h4 class="text-xs font-bold text-green-400 uppercase tracking-wider mb-3" data-i18n="cert_nvidia_h1">
+                        正式證書（Certificate of Competency）</h4>
+                    <ul class="text-gray-300 text-sm space-y-2 leading-relaxed list-disc pl-5" data-i18n="cert_nvidia_list1">
+                        <li>建造以 Transformer 為基礎的自然語言處理應用 — 2026/06/11</li>
+                        <li>Getting Started with Deep Learning — 2026/05/30</li>
+                        <li>Getting Started with AI on Jetson Nano — 2025/09/20</li>
+                        <li>Disaster Risk Monitoring Using Satellite Imagery（NVIDIA × UNITAR/UNOSAT）— 2025/10/05</li>
+                    </ul>
+                </div>
+                <div class="mb-6">
+                    <h4 class="text-xs font-bold text-green-400 uppercase tracking-wider mb-3" data-i18n="cert_nvidia_h2">
+                        100% 完課紀錄．Isaac Sim / ROS 系列（無獨立證書）</h4>
+                    <ul class="text-gray-300 text-sm space-y-2 leading-relaxed list-disc pl-5">
+                        <li>An Introduction to AI-Based Robot Development With Isaac ROS</li>
+                        <li>Synthetic Data Generation for Perception Model Training in Isaac Sim</li>
+                        <li>Developing Robots With Software-in-the-Loop (SIL) in Isaac Sim</li>
+                        <li>Leveraging ROS 2 and Hardware-in-the-Loop (HIL) in Isaac Sim</li>
+                        <li>Ingesting Robot Assets and Simulating Your Robot in Isaac Sim</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-green-400 uppercase tracking-wider mb-3" data-i18n="cert_nvidia_h3">
+                        NVIDIA DLI 短課完課紀錄（100% 完課，平台未核發個別證書）</h4>
+                    <ul class="text-gray-300 text-sm space-y-1.5 leading-relaxed list-disc pl-5 sm:columns-2 gap-x-6">
+                        <li>Generative AI Explained</li>
+                        <li>Agentic AI Explained</li>
+                        <li>Building A Brain in 10 Minutes</li>
+                        <li>An Even Easier Introduction to CUDA</li>
+                        <li>An Introduction to Developing With NVIDIA Omniverse</li>
+                        <li>Creating an Omniverse Extension With Python</li>
+                        <li>Introduction to NVIDIA NIM™ Microservices</li>
+                        <li>Augment your LLM Using Retrieval Augmented Generation</li>
+                        <li>Build a Deep Research Agent</li>
+                        <li>Building RAG Agents with LLMs</li>
+                        <li>Deploying a Model for Inference at Production Scale</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cert: Google -->
+            <div id="modal-cert-google"
+                class="detail-modal hidden glass-card bg-[#12161c] max-w-2xl w-full rounded-2xl p-8 relative max-h-[85vh] overflow-y-auto"
+                onclick="event.stopPropagation()">
+                <button type="button" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl leading-none"
+                    onclick="closeDetailModal()" aria-label="Close">&times;</button>
+                <h3 class="text-2xl font-bold text-white mb-6 pr-8" data-i18n="cert_google_name">GOOGLE SKILL 認證</h3>
+                <div class="mb-6">
+                    <h4 class="text-xs font-bold text-neon-cyan uppercase tracking-wider mb-3" data-i18n="cert_google_h1">
+                        Google 數位人才探索計畫．結業證書</h4>
+                    <ul class="text-gray-300 text-sm space-y-2 leading-relaxed list-disc pl-5" data-i18n="cert_google_list1">
+                        <li>AI 職場通識學程結業證書（AI for Generalists）— 證書編號 1OCR2FFD</li>
+                        <li>Google Cloud 學程結業證書 — 證書編號 1OCR2FFD</li>
+                    </ul>
+                </div>
+                <div class="mb-6">
+                    <h4 class="text-xs font-bold text-neon-cyan uppercase tracking-wider mb-3" data-i18n="cert_google_h2">
+                        Google Cloud Skill Badge（Credly 可驗證徽章）</h4>
+                    <ul class="text-gray-300 text-sm space-y-2 leading-relaxed list-disc pl-5">
+                        <li>Analyze BigQuery Data in Connected Sheets — 2025/12/02</li>
+                        <li>Classify Images with TensorFlow on Google Cloud — 2025/12/29</li>
+                        <li>Derive Insights from BigQuery Data — 2025/12/29</li>
+                        <li>Get Started with Google Workspace Tools — 2025/11/20</li>
+                        <li>Integrate BigQuery Data and Google Workspace using Apps Script — 2025/12/04</li>
+                        <li>Manage Kubernetes in Google Cloud — 2025/12/29</li>
+                        <li>Secure BigLake Data — 2025/12/10</li>
+                    </ul>
+                </div>
+                <div class="mb-6">
+                    <h4 class="text-xs font-bold text-neon-cyan uppercase tracking-wider mb-3" data-i18n="cert_google_h3">
+                        Google Cloud Skills Boost「My Learning」已完成課程</h4>
+                    <p class="text-gray-400 text-sm mb-3" data-i18n="cert_google_note">共 68 項已完成課程／徽章（2025/10 –
+                        2026/06），涵蓋官方技能標籤（Skill Wallet）：</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-neon-cyan/10 text-neon-cyan rounded-full text-xs">BigQuery</span>
+                        <span class="px-3 py-1 bg-neon-cyan/10 text-neon-cyan rounded-full text-xs">Spreadsheets</span>
+                        <span class="px-3 py-1 bg-neon-cyan/10 text-neon-cyan rounded-full text-xs">Google Workspace</span>
+                        <span class="px-3 py-1 bg-neon-cyan/10 text-neon-cyan rounded-full text-xs">Business Intelligence
+                            (BI)</span>
+                        <span class="px-3 py-1 bg-neon-cyan/10 text-neon-cyan rounded-full text-xs">Cloud SQL</span>
+                        <span class="px-3 py-1 bg-neon-cyan/10 text-neon-cyan rounded-full text-xs">Cloud Storage</span>
+                        <span class="px-3 py-1 bg-neon-cyan/10 text-neon-cyan rounded-full text-xs">Data Analysis</span>
+                        <span class="px-3 py-1 bg-neon-cyan/10 text-neon-cyan rounded-full text-xs">Data Extraction</span>
+                        <span class="px-3 py-1 bg-neon-cyan/10 text-neon-cyan rounded-full text-xs">Data Science</span>
+                        <span class="px-3 py-1 bg-neon-cyan/10 text-neon-cyan rounded-full text-xs">Database Queries</span>
+                        <span class="px-3 py-1 bg-neon-cyan/10 text-neon-cyan rounded-full text-xs">Docker</span>
+                        <span class="px-3 py-1 bg-neon-cyan/10 text-neon-cyan rounded-full text-xs">Google Apps
+                            Script</span>
+                        <span class="px-3 py-1 bg-neon-cyan/10 text-neon-cyan rounded-full text-xs">Identity and Access
+                            Management (IAM)</span>
+                        <span class="px-3 py-1 bg-neon-cyan/10 text-neon-cyan rounded-full text-xs">Kubernetes</span>
+                        <span class="px-3 py-1 bg-neon-cyan/10 text-neon-cyan rounded-full text-xs">Machine Learning
+                            (ML)</span>
+                        <span class="px-3 py-1 bg-neon-cyan/10 text-neon-cyan rounded-full text-xs">TensorFlow</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-neon-cyan uppercase tracking-wider mb-3" data-i18n="cert_google_h4">
+                        其他 Google 認證</h4>
+                    <ul class="text-gray-300 text-sm space-y-2 leading-relaxed list-disc pl-5" data-i18n="cert_google_list4">
+                        <li>AI 技術輔助高效廣告認證（Google Ads AI-Powered Performance）— Google (Skillshop)，發證
+                            2026/06/25，效期至 2027/06/25</li>
+                        <li>Getting Started with Google Kubernetes Engine — iSpan × Google Cloud，台北，2025/11/06</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cert: Anthropic -->
+            <div id="modal-cert-anthropic"
+                class="detail-modal hidden glass-card bg-[#12161c] max-w-2xl w-full rounded-2xl p-8 relative max-h-[85vh] overflow-y-auto"
+                onclick="event.stopPropagation()">
+                <button type="button" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl leading-none"
+                    onclick="closeDetailModal()" aria-label="Close">&times;</button>
+                <h3 class="text-2xl font-bold text-white mb-6 pr-8" data-i18n="cert_anthropic_name">ANTHROPIC ACADEMY 認證</h3>
+                <p class="text-gray-400 text-sm mb-4" data-i18n="cert_anthropic_note">Anthropic Academy
+                    完課紀錄（官方平台目前無公開可下載之證書頁面）：</p>
+                <ul class="text-gray-300 text-sm space-y-2 leading-relaxed list-disc pl-5">
+                    <li>Claude Code 101</li>
+                    <li>Model Context Protocol (MCP)</li>
+                </ul>
+            </div>
+
+            <!-- Cert: MathWorks -->
+            <div id="modal-cert-mathworks"
+                class="detail-modal hidden glass-card bg-[#12161c] max-w-2xl w-full rounded-2xl p-8 relative max-h-[85vh] overflow-y-auto"
+                onclick="event.stopPropagation()">
+                <button type="button" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl leading-none"
+                    onclick="closeDetailModal()" aria-label="Close">&times;</button>
+                <h3 class="text-2xl font-bold text-white mb-6 pr-8" data-i18n="cert_mathworks_name">MATHWORKS 認證</h3>
+                <ul class="text-gray-300 text-sm space-y-2 leading-relaxed list-disc pl-5" data-i18n="cert_mathworks_list">
+                    <li>Deep Learning Onramp — MathWorks Training Services，100% 完課，2025/08/16</li>
+                </ul>
+            </div>
+
+            <!-- Cert: 淡江大學 AI 創智學院 -->
+            <div id="modal-cert-tku"
+                class="detail-modal hidden glass-card bg-[#12161c] max-w-2xl w-full rounded-2xl p-8 relative max-h-[85vh] overflow-y-auto"
+                onclick="event.stopPropagation()">
+                <button type="button" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl leading-none"
+                    onclick="closeDetailModal()" aria-label="Close">&times;</button>
+                <h3 class="text-2xl font-bold text-white mb-6 pr-8" data-i18n="cert_tku_name">淡江大學 AI 創智學院研習證明</h3>
+                <ul class="text-gray-300 text-sm space-y-2 leading-relaxed list-disc pl-5" data-i18n="cert_tku_list">
+                    <li>【AI-102】微軟認證線上課程：如何成為 Azure AI 工程師？— 6 小時研習，2026/06/18，院字第11420012號</li>
+                    <li>【AI 實作體驗工作坊】：多模態 AI 應用 — 2 小時研習，2026/06/18，院字第11420272號</li>
+                </ul>
+            </div>
+
+            <!-- Cert: 其他機構 -->
+            <div id="modal-cert-other"
+                class="detail-modal hidden glass-card bg-[#12161c] max-w-2xl w-full rounded-2xl p-8 relative max-h-[85vh] overflow-y-auto"
+                onclick="event.stopPropagation()">
+                <button type="button" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl leading-none"
+                    onclick="closeDetailModal()" aria-label="Close">&times;</button>
+                <h3 class="text-2xl font-bold text-white mb-6 pr-8" data-i18n="cert_other_name">其他機構課程</h3>
+                <ul class="text-gray-300 text-sm space-y-2 leading-relaxed list-disc pl-5" data-i18n="cert_other_list">
+                    <li>財團法人資訊工業策進會結業證書：駕馭 AI 新浪潮－Google AI 的應用入門（臺北市政府青年局主辦，15 小時，2025/06/14–15，證書號碼(114)TPYDIII
+                        NO.148）</li>
+                    <li>AI 商務應用與智慧教育平台推廣工作坊完訓證書 — 7 小時，完成日期 2025/12/18，證書編號 TB00032</li>
                 </ul>
             </div>
         </div>
@@ -588,23 +756,65 @@
                     <div class="h-1 flex-grow bg-gray-800 rounded"></div>
                 </div>
                 <div class="space-y-4">
-                    <div
-                        class="bg-[#161b22] p-4 rounded-lg border border-gray-800 flex items-center gap-4 hover:border-neon-cyan transition-colors">
-                        <i class="fa-solid fa-certificate text-yellow-500 text-xl"></i>
-                        <div>
-                            <h4 class="text-white font-bold text-sm" data-i18n="cert_1_name">NVIDIA 深度學習認證</h4>
-                            <p class="text-xs text-gray-500" data-i18n="cert_1_desc">深度學習技術認證</p>
-                            <!-- TODO: 補上驗證連結 (credential URL) -->
+                    <div class="bg-[#161b22] p-4 rounded-lg border border-gray-800 flex items-center gap-4 hover:border-neon-cyan transition-colors cursor-pointer"
+                        role="button" tabindex="0" onclick="openDetailModal('modal-cert-nvidia')"
+                        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDetailModal('modal-cert-nvidia');}">
+                        <i class="fa-solid fa-microchip text-green-400 text-xl"></i>
+                        <div class="flex-1">
+                            <h4 class="text-white font-bold text-sm" data-i18n="cert_nvidia_name">NVIDIA 深度學習認證</h4>
+                            <p class="text-xs text-gray-500" data-i18n="cert_nvidia_summary">4 張正式證書．16 門課程完課</p>
                         </div>
+                        <i class="fa-solid fa-chevron-right text-gray-600 text-sm"></i>
                     </div>
-                    <div
-                        class="bg-[#161b22] p-4 rounded-lg border border-gray-800 flex items-center gap-4 hover:border-neon-cyan transition-colors">
+                    <div class="bg-[#161b22] p-4 rounded-lg border border-gray-800 flex items-center gap-4 hover:border-neon-cyan transition-colors cursor-pointer"
+                        role="button" tabindex="0" onclick="openDetailModal('modal-cert-google')"
+                        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDetailModal('modal-cert-google');}">
                         <i class="fa-solid fa-id-card text-neon-cyan text-xl"></i>
-                        <div>
-                            <h4 class="text-white font-bold text-sm" data-i18n="cert_2_name">GOOGLE SKILL 認證</h4>
-                            <!-- TODO: 確認正確認證名稱（Google Cloud Skills Boost 課程？）與驗證連結 -->
-                            <p class="text-xs text-gray-500" data-i18n="cert_2_desc">Google Cloud 技能認證</p>
+                        <div class="flex-1">
+                            <h4 class="text-white font-bold text-sm" data-i18n="cert_google_name">GOOGLE SKILL 認證</h4>
+                            <p class="text-xs text-gray-500" data-i18n="cert_google_summary">2 張結業證書．68 項課程徽章</p>
                         </div>
+                        <i class="fa-solid fa-chevron-right text-gray-600 text-sm"></i>
+                    </div>
+                    <div class="bg-[#161b22] p-4 rounded-lg border border-gray-800 flex items-center gap-4 hover:border-neon-cyan transition-colors cursor-pointer"
+                        role="button" tabindex="0" onclick="openDetailModal('modal-cert-anthropic')"
+                        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDetailModal('modal-cert-anthropic');}">
+                        <i class="fa-solid fa-wand-magic-sparkles text-orange-400 text-xl"></i>
+                        <div class="flex-1">
+                            <h4 class="text-white font-bold text-sm" data-i18n="cert_anthropic_name">ANTHROPIC ACADEMY 認證</h4>
+                            <p class="text-xs text-gray-500" data-i18n="cert_anthropic_summary">2 門官方課程完課</p>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-gray-600 text-sm"></i>
+                    </div>
+                    <div class="bg-[#161b22] p-4 rounded-lg border border-gray-800 flex items-center gap-4 hover:border-neon-cyan transition-colors cursor-pointer"
+                        role="button" tabindex="0" onclick="openDetailModal('modal-cert-mathworks')"
+                        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDetailModal('modal-cert-mathworks');}">
+                        <i class="fa-solid fa-chart-line text-red-400 text-xl"></i>
+                        <div class="flex-1">
+                            <h4 class="text-white font-bold text-sm" data-i18n="cert_mathworks_name">MATHWORKS 認證</h4>
+                            <p class="text-xs text-gray-500" data-i18n="cert_mathworks_summary">1 張課程證書</p>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-gray-600 text-sm"></i>
+                    </div>
+                    <div class="bg-[#161b22] p-4 rounded-lg border border-gray-800 flex items-center gap-4 hover:border-neon-cyan transition-colors cursor-pointer"
+                        role="button" tabindex="0" onclick="openDetailModal('modal-cert-tku')"
+                        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDetailModal('modal-cert-tku');}">
+                        <i class="fa-solid fa-graduation-cap text-cyan-400 text-xl"></i>
+                        <div class="flex-1">
+                            <h4 class="text-white font-bold text-sm" data-i18n="cert_tku_name">淡江大學 AI 創智學院研習證明</h4>
+                            <p class="text-xs text-gray-500" data-i18n="cert_tku_summary">2 張研習證明</p>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-gray-600 text-sm"></i>
+                    </div>
+                    <div class="bg-[#161b22] p-4 rounded-lg border border-gray-800 flex items-center gap-4 hover:border-neon-cyan transition-colors cursor-pointer"
+                        role="button" tabindex="0" onclick="openDetailModal('modal-cert-other')"
+                        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDetailModal('modal-cert-other');}">
+                        <i class="fa-solid fa-building-columns text-purple-400 text-xl"></i>
+                        <div class="flex-1">
+                            <h4 class="text-white font-bold text-sm" data-i18n="cert_other_name">其他機構課程</h4>
+                            <p class="text-xs text-gray-500" data-i18n="cert_other_summary">2 張結業／完訓證書</p>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-gray-600 text-sm"></i>
                     </div>
                     <div
                         class="bg-[#161b22] p-4 rounded-lg border border-gray-800 flex items-center gap-4 hover:border-neon-cyan transition-colors">
