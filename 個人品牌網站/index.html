@@ -5,6 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>郭正安 Bruce - 跨領域工程與 AI 專家</title>
+    <meta name="description"
+        content="郭正安（Bruce Kuo）— 淡江大學土木工程碩士，專注風洞實驗、CFD 模擬與機器學習應用，致力於將 AI 導入工程研發流程，打造跨領域的智慧化解決方案。">
+    <meta property="og:title" content="郭正安 Bruce - 跨領域工程與 AI 專家">
+    <meta property="og:description" content="淡江大學土木工程碩士，專注風洞實驗、CFD 模擬與機器學習應用，致力於將 AI 導入工程研發流程。">
+    <meta property="og:image" content="https://bruce0611.github.io/my-web-project/profile.png">
+    <meta property="og:url" content="https://bruce0611.github.io/my-web-project/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="郭正安 Bruce - 跨領域工程與 AI 專家">
+    <meta name="twitter:description" content="淡江大學土木工程碩士，專注風洞實驗、CFD 模擬與機器學習應用，致力於將 AI 導入工程研發流程。">
+    <meta name="twitter:image" content="https://bruce0611.github.io/my-web-project/profile.png">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230B0C10' stroke='%2366FCF1' stroke-width='4'/%3E%3Ctext x='50' y='68' font-family='monospace' font-weight='bold' font-size='55' fill='%2366FCF1' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -15,7 +28,6 @@
                         'tech-bg': '#121212',
                         'neon-cyan': '#66FCF1',
                         'neon-dim': '#45A29E',
-                        'brand-ig': '#E1306C',
                         'brand-ig': '#E1306C',
                         'brand-yt': '#FF0000',
                         'brand-li': '#0077b5',
@@ -62,7 +74,7 @@
     <!-- 1. 頂部導覽列 -->
     <nav
         class="fixed w-full z-50 top-0 px-6 py-4 bg-[#0B0C10]/85 backdrop-blur-lg border-b border-white/5 shadow-lg transition-all duration-300">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="max-w-7xl mx-auto relative flex justify-between items-center">
             <div class="text-2xl font-bold font-mono text-white tracking-tighter cursor-pointer hover:text-neon-cyan transition-colors"
                 onclick="window.scrollTo(0,0)">
                 Bruce<span class="text-neon-cyan">.Kuo</span>
@@ -91,6 +103,35 @@
                 <a href="#contact"
                     class="hidden md:block px-5 py-2 border border-neon-cyan text-neon-cyan rounded hover:bg-neon-cyan hover:text-tech-dark transition-all font-bold shadow-[0_0_15px_rgba(102,252,241,0.2)]"
                     data-i18n="nav_contact">聯絡我</a>
+
+                <!-- 漢堡選單按鈕（xl 以下顯示） -->
+                <button id="mobile-menu-btn" type="button" class="xl:hidden text-white text-2xl leading-none p-1"
+                    onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false"
+                    aria-controls="mobile-menu">
+                    <i class="fa-solid fa-bars" id="mobile-menu-icon"></i>
+                </button>
+            </div>
+
+            <!-- 手機版選單面板 -->
+            <div id="mobile-menu"
+                class="hidden xl:hidden flex-col gap-1 font-mono absolute top-full left-0 mt-4 w-full bg-[#0B0C10]/95 backdrop-blur-lg border border-white/10 rounded-xl shadow-lg p-4">
+                <a href="#about" class="nav-item-mobile" onclick="setActive(this); closeMobileMenu()"
+                    data-i18n="nav_about">關於我</a>
+                <a href="#skills" class="nav-item-mobile" onclick="setActive(this); closeMobileMenu()"
+                    data-i18n="nav_skills">專業技能</a>
+                <a href="#portfolio" class="nav-item-mobile" onclick="setActive(this); closeMobileMenu()"
+                    data-i18n="nav_portfolio">專案作品</a>
+                <a href="#experience" class="nav-item-mobile" onclick="setActive(this); closeMobileMenu()"
+                    data-i18n="nav_experience">工作經驗</a>
+                <a href="#education" class="nav-item-mobile" onclick="setActive(this); closeMobileMenu()"
+                    data-i18n="nav_education">教育背景</a>
+                <a href="#certifications" class="nav-item-mobile" onclick="setActive(this); closeMobileMenu()"
+                    data-i18n="nav_certs">認證證照</a>
+                <a href="#interests" class="nav-item-mobile" onclick="setActive(this); closeMobileMenu()"
+                    data-i18n="nav_interests">個人興趣</a>
+                <a href="#contact"
+                    class="mt-2 text-center px-5 py-2 border border-neon-cyan text-neon-cyan rounded hover:bg-neon-cyan hover:text-tech-dark transition-all font-bold"
+                    onclick="closeMobileMenu()" data-i18n="nav_contact">聯絡我</a>
             </div>
         </div>
     </nav>
@@ -110,7 +151,7 @@
                         <span data-i18n="hero_title_1">跨領域工程</span> <br>
                         <span
                             class="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-blue-400 animate-pulse-slow"
-                            data-i18n="hero_title_2">AI 技術專家</span>
+                            data-i18n="hero_title_2">AI 應用研發</span>
                     </h1>
 
                     <div class="flex flex-col gap-2 mb-8 text-gray-300 font-mono text-sm md:text-base">
@@ -118,36 +159,46 @@
                             <i class="fa-solid fa-envelope w-6 text-neon-dim group-hover:text-neon-cyan"></i>
                             <a href="mailto:brucekuo0611@gmail.com">brucekuo0611@gmail.com</a>
                         </div>
-                        <div class="flex items-center hover:text-neon-cyan transition-colors cursor-pointer group">
-                            <i class="fa-solid fa-phone w-6 text-neon-dim group-hover:text-neon-cyan"></i>
-                            <span>+886 965-660-770</span>
-                        </div>
                     </div>
 
                     <p class="text-lg text-gray-400 max-w-xl mb-8 leading-relaxed border-l-4 border-neon-dim pl-4"
                         data-i18n="hero_desc">
-                        擅長運用多源數據分析與機器學習，解決複雜工程挑戰。<br>
-                        持續推動科技與工程的融合，致力於創造更智慧的解決方案。
+                        具備土木底蘊與 AI 跨域實力的研發工程師，擅長將 CFD 與結構振動問題透過 BigQuery
+                        轉化為大規模分析模型。曾主導格柵優化專案，達成 25.5% 擾動降幅與 32% 減阻成效，具備將數值模擬導入 ML 進行自動化分析的核心實力。<br><br>持有
+                        NVIDIA 與 Google Cloud 專業認證，精通運用 BigQuery ML 處理海量實驗數據並縮短特徵提取週期。熟練 Docker 與 GKE
+                        容器化部署，能將預測模型轉化為高可用服務，符合 MLOps 監控需求。具備 LLM 服務化基礎，能利用 Prompt 與 Agent
+                        框架開發工程數據轉譯助手，實現從原始數據到技術洞察的端到端自動化。<br><br>致力於將 AI
+                        導入工程工作流，憑藉嚴謹邏輯與溝通轉譯能力，為製程穩定與良率提升提供精準洞察，是具備開發下一代 AI 系統實力的高效協作者。
                     </p>
+
+                    <!-- TODO: 等待使用者提供 resume.pdf（放於 個人品牌網站/resume.pdf）後即可正常下載 -->
+                    <a href="resume.pdf" download target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 mb-6 px-6 py-3 border-2 border-neon-cyan text-neon-cyan font-bold rounded-full hover:bg-neon-cyan hover:text-tech-dark transition-all duration-300 shadow-[0_0_15px_rgba(102,252,241,0.2)]">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span data-i18n="btn_download_resume">下載履歷 PDF</span>
+                    </a>
 
                     <div class="grid grid-cols-2 gap-4 opacity-0 animate-fade-in-up delay-300">
                         <!-- LinkedIn -->
                         <a href="https://www.linkedin.com/in/kuo-cheng-an-2a4854371/" target="_blank"
+                            rel="noopener noreferrer"
                             class="w-full justify-center flex items-center gap-2 px-6 py-3 bg-[#0077b5] text-white font-bold rounded-full hover:scale-110 hover:shadow-[0_0_20px_rgba(0,119,181,0.6)] transition-all duration-300">
                             <i class="fa-brands fa-linkedin text-xl"></i> LinkedIn
                         </a>
                         <!-- GitHub -->
                         <a href="https://github.com/Bruce0611?tab=repositories" target="_blank"
+                            rel="noopener noreferrer"
                             class="w-full justify-center flex items-center gap-2 px-6 py-3 bg-[#333] text-white font-bold rounded-full hover:scale-110 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300">
                             <i class="fa-brands fa-github text-xl"></i> GitHub
                         </a>
                         <!-- Instagram -->
-                        <a href="https://www.instagram.com/scl_hin_11/" target="_blank"
+                        <a href="https://www.instagram.com/scl_hin_11/" target="_blank" rel="noopener noreferrer"
                             class="w-full justify-center flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white font-bold rounded-full hover:scale-110 hover:shadow-[0_0_20px_rgba(225,48,108,0.6)] transition-all duration-300">
                             <i class="fa-brands fa-instagram text-xl"></i> Instagram
                         </a>
                         <!-- YouTube -->
                         <a href="https://www.youtube.com/@scl_hin_11/videos" target="_blank"
+                            rel="noopener noreferrer"
                             class="w-full justify-center flex items-center gap-2 px-6 py-3 bg-[#FF0000] text-white font-bold rounded-full hover:scale-110 hover:shadow-[0_0_20px_rgba(255,0,0,0.6)] transition-all duration-300">
                             <i class="fa-brands fa-youtube text-xl"></i> YouTube
                         </a>
@@ -155,7 +206,7 @@
                 </div>
 
                 <div class="order-1 lg:order-2 flex justify-center opacity-0 animate-fade-in-up delay-200">
-                    <div class="relative w-72 h-72 md:w-96 md:h-96 group perspective-1000">
+                    <div class="relative w-72 h-72 md:w-96 md:h-96 group">
                         <div
                             class="absolute inset-0 rounded-full border-2 border-dashed border-neon-cyan/30 animate-[spin_10s_linear_infinite] scale-110">
                         </div>
@@ -231,6 +282,7 @@
                     <div class="flex flex-wrap gap-2 mt-auto">
                         <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs">AutoCAD</span>
                         <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs">BIM</span>
+                        <!-- TODO: 向使用者確認 Tracker 指的是 Physics Tracker 影像分析軟體，或需改名/移除 -->
                         <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs">Tracker</span>
                     </div>
                 </div>
@@ -278,7 +330,10 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Project 1 -->
-                <a href="#" target="_blank" class="glass-card p-0 rounded-2xl overflow-hidden group block">
+                <!-- TODO: 待碩士論文區塊(#thesis)完成後，將本卡片改為連到 #thesis -->
+                <div class="glass-card p-0 rounded-2xl overflow-hidden group block cursor-pointer" role="button"
+                    tabindex="0" onclick="openProjectModal('modal-proj1')"
+                    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openProjectModal('modal-proj1');}">
                     <div class="h-48 bg-gray-800 relative overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0B0C10] to-transparent z-10"></div>
                         <div
@@ -293,16 +348,19 @@
                         <p class="text-gray-400 text-sm mb-6" data-i18n="proj_1_desc">
                             整合深度學習算法與結構動力學理論，自動辨識高層建築之氣動不穩定區位。透過即時優化流場控制機制（如主動減振器參數），有效降低阻力係數達 32% 並抑制 25.5% 擾動強度。
                         </p>
-                        <span
-                            class="inline-flex items-center text-white text-sm font-bold border-b border-neon-cyan pb-1 hover:text-neon-cyan transition">
+                        <button type="button"
+                            class="inline-flex items-center text-white text-sm font-bold border-b border-neon-cyan pb-1 hover:text-neon-cyan transition"
+                            onclick="event.stopPropagation(); openProjectModal('modal-proj1')">
                             <span data-i18n="btn_view_project">查看專案詳情</span> <i
                                 class="fa-solid fa-arrow-right ml-2"></i>
-                        </span>
+                        </button>
                     </div>
-                </a>
+                </div>
 
                 <!-- Project 2 -->
-                <a href="#" target="_blank" class="glass-card p-0 rounded-2xl overflow-hidden group block">
+                <div class="glass-card p-0 rounded-2xl overflow-hidden group block cursor-pointer" role="button"
+                    tabindex="0" onclick="openProjectModal('modal-proj2')"
+                    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openProjectModal('modal-proj2');}">
                     <div class="h-48 bg-gray-800 relative overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0B0C10] to-transparent z-10"></div>
                         <div
@@ -314,18 +372,58 @@
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-neon-cyan transition-colors"
                             data-i18n="proj_2_title">高精度 CFD 建築流場模擬與空氣動力優化平台</h3>
-                        <p class="text-gray-400 text-sm mb-6" data-i18n="proj_2_desc">運用大渦模擬 ($LES$)
+                        <p class="text-gray-400 text-sm mb-6" data-i18n="proj_2_desc">運用大渦模擬 (LES)
                             技術重建複雜大氣邊界層流場，深度解析建築物表面的壓力分布與尾流結構。透過數值模擬驗證各種氣動優化手段之功效，為抗風設計提供高精確度的數據支撐。
                         </p>
-                        <span
-                            class="inline-flex items-center text-white text-sm font-bold border-b border-neon-cyan pb-1 hover:text-neon-cyan transition">
+                        <button type="button"
+                            class="inline-flex items-center text-white text-sm font-bold border-b border-neon-cyan pb-1 hover:text-neon-cyan transition"
+                            onclick="event.stopPropagation(); openProjectModal('modal-proj2')">
                             <span data-i18n="btn_view_project">查看專案詳情</span> <i
                                 class="fa-solid fa-arrow-right ml-2"></i>
-                        </span>
+                        </button>
                     </div>
-                </a>
+                </div>
             </div>
         </section>
+
+        <!-- 專案詳情 Modal -->
+        <div id="modal-overlay" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-sm px-4"
+            onclick="closeProjectModal(event)">
+            <div id="modal-proj1"
+                class="project-modal hidden glass-card bg-[#12161c] max-w-2xl w-full rounded-2xl p-8 relative max-h-[85vh] overflow-y-auto"
+                onclick="event.stopPropagation()">
+                <button type="button" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl leading-none"
+                    onclick="closeProjectModal()" aria-label="Close">&times;</button>
+                <h3 class="text-2xl font-bold text-white mb-6 pr-8" data-i18n="proj_1_title">智慧型建築風振控制與結構性能優化系統</h3>
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="glass-card p-4 rounded-xl text-center">
+                        <div class="text-3xl font-bold text-neon-cyan">32%</div>
+                        <div class="text-xs text-gray-400 mt-1" data-i18n="proj_1_metric_1">阻力係數降低</div>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl text-center">
+                        <div class="text-3xl font-bold text-neon-cyan">25.5%</div>
+                        <div class="text-xs text-gray-400 mt-1" data-i18n="proj_1_metric_2">擾動強度抑制</div>
+                    </div>
+                </div>
+                <ul class="text-gray-300 text-sm space-y-3 leading-relaxed list-disc pl-5" data-i18n="proj_1_modal_points">
+                    <li>整合深度學習算法與結構動力學理論，自動辨識高層建築之氣動不穩定區位。</li>
+                    <li>即時優化流場控制機制（如主動減振器參數），動態調整風振控制策略。</li>
+                </ul>
+                <!-- TODO: 待碩士論文區塊(#thesis)完成後，於此補上連到 #thesis 的按鈕 -->
+            </div>
+            <div id="modal-proj2"
+                class="project-modal hidden glass-card bg-[#12161c] max-w-2xl w-full rounded-2xl p-8 relative max-h-[85vh] overflow-y-auto"
+                onclick="event.stopPropagation()">
+                <button type="button" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl leading-none"
+                    onclick="closeProjectModal()" aria-label="Close">&times;</button>
+                <h3 class="text-2xl font-bold text-white mb-6 pr-8" data-i18n="proj_2_title">高精度 CFD 建築流場模擬與空氣動力優化平台</h3>
+                <ul class="text-gray-300 text-sm space-y-3 leading-relaxed list-disc pl-5" data-i18n="proj_2_modal_points">
+                    <li>運用大渦模擬 (LES) 技術重建複雜大氣邊界層流場。</li>
+                    <li>深度解析建築物表面的壓力分布與尾流結構。</li>
+                    <li>透過數值模擬驗證各種氣動優化手段之功效，為抗風設計提供高精確度的數據支撐。</li>
+                </ul>
+            </div>
+        </div>
 
         <!-- 5. 工作經驗 Experience -->
         <section id="experience" class="py-20 scroll-mt-20">
@@ -350,7 +448,7 @@
                         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-3">
                             <h3 class="text-xl font-bold text-white" data-i18n="exp_5_role">材料力學助教</h3>
                             <span class="text-gray-400 text-sm font-mono" data-i18n="exp_5_meta">2025 – 2026 |
-                                University Dept.</span>
+                                淡江大學</span>
                         </div>
                         <div class="text-gray-400 space-y-2 text-sm leading-relaxed" data-i18n="exp_5_desc">
                             <p>• 建立標準化教學流程 (SOP)，優化授課效率。</p>
@@ -378,10 +476,9 @@
                             <p>• 透過大型活動經營商業人脈。</p>
                         </div>
                         <div class="mt-2 pt-2 border-t border-white/5" data-i18n="exp_4_award">
-                            <a href="https://www.youtube.com" target="_blank"
-                                class="inline-flex items-center text-yellow-400 hover:text-yellow-300 text-sm font-bold transition-colors">
+                            <span class="inline-flex items-center text-yellow-400 text-sm font-bold">
                                 <i class="fa-solid fa-trophy mr-2"></i> 滬尾之星歌唱組 —— 第一名 (2025)
-                            </a>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -395,8 +492,8 @@
                         class="glass-card bg-[#1F2833] p-6 rounded-xl hover:shadow-[0_0_20px_rgba(102,252,241,0.3)] border border-white/5 transition-all">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-3">
                             <h3 class="text-xl font-bold text-white" data-i18n="exp_3_role">國際學生籃球教練</h3>
-                            <span class="text-gray-400 text-sm font-mono" data-i18n="exp_3_meta">2021 – 2025 | Freelance
-                                / Academy</span>
+                            <span class="text-gray-400 text-sm font-mono" data-i18n="exp_3_meta">2021 – 2025 |
+                                天母美國學校</span>
                         </div>
                         <div class="text-gray-400 space-y-2 text-sm leading-relaxed" data-i18n="exp_3_desc">
                             <p>• 執行 <span class="text-neon-cyan font-semibold">全英語授課 (English-Only
@@ -446,10 +543,9 @@
                             <p>• 協助制定訓練 SOP，提升團隊執行效率。</p>
                         </div>
                         <div class="mt-2 pt-2 border-t border-white/5" data-i18n="exp_1_award">
-                            <a href="https://www.facebook.com" target="_blank"
-                                class="inline-flex items-center text-yellow-400 hover:text-yellow-300 text-sm font-bold transition-colors">
+                            <span class="inline-flex items-center text-yellow-400 text-sm font-bold">
                                 <i class="fa-solid fa-trophy mr-2"></i> 台中市西屯主委盃籃球賽 —— 第一名 (2020)
-                            </a>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -470,7 +566,7 @@
                         <span class="text-blue-400 font-bold">GPA 4.0/4.0</span>
                     </div>
                     <p class="text-gray-500 mb-4" data-i18n="edu_1_school">淡江大學 | 2025 - 2026</p>
-                    <p class="text-sm text-gray-400" data-i18n="edu_1_desc">研究 : 流場控制與振動優化系統<br>GPA: 4.0/4.0</p>
+                    <p class="text-sm text-gray-400" data-i18n="edu_1_desc">研究 : 流場控制與振動優化系統</p>
                 </div>
                 <!-- Education Item 2 -->
                 <div class="glass-card p-8 rounded-xl border-l-4 border-cyan-600">
@@ -479,7 +575,7 @@
                         <span class="text-cyan-400 font-bold">GPA 3.45/4.0</span>
                     </div>
                     <p class="text-gray-500 mb-4" data-i18n="edu_2_school">淡江大學 | 2021 - 2025</p>
-                    <p class="text-sm text-gray-400" data-i18n="edu_2_desc">熱舞社美軒、專題競賽優勝<br>GPA: 3.45/4.0</p>
+                    <p class="text-sm text-gray-400" data-i18n="edu_2_desc">熱舞社美軒、專題競賽優勝</p>
                 </div>
             </div>
         </section>
@@ -498,6 +594,7 @@
                         <div>
                             <h4 class="text-white font-bold text-sm" data-i18n="cert_1_name">NVIDIA 深度學習認證</h4>
                             <p class="text-xs text-gray-500" data-i18n="cert_1_desc">深度學習技術認證</p>
+                            <!-- TODO: 補上驗證連結 (credential URL) -->
                         </div>
                     </div>
                     <div
@@ -505,7 +602,17 @@
                         <i class="fa-solid fa-id-card text-neon-cyan text-xl"></i>
                         <div>
                             <h4 class="text-white font-bold text-sm" data-i18n="cert_2_name">GOOGLE SKILL 認證</h4>
-                            <p class="text-xs text-gray-500" data-i18n="cert_2_desc">國家高考及格</p>
+                            <!-- TODO: 確認正確認證名稱（Google Cloud Skills Boost 課程？）與驗證連結 -->
+                            <p class="text-xs text-gray-500" data-i18n="cert_2_desc">Google Cloud 技能認證</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-[#161b22] p-4 rounded-lg border border-gray-800 flex items-center gap-4 hover:border-neon-cyan transition-colors">
+                        <i class="fa-solid fa-landmark text-blue-400 text-xl"></i>
+                        <div>
+                            <!-- TODO: 向使用者確認正確考試名稱（如：專技高考／普考 土木工程科）與及格年度 -->
+                            <h4 class="text-white font-bold text-sm" data-i18n="cert_3_name">國家考試及格</h4>
+                            <p class="text-xs text-gray-500" data-i18n="cert_3_desc">土木工程科（詳細名稱待確認）</p>
                         </div>
                     </div>
                 </div>
@@ -546,19 +653,22 @@
                     class="glass-card px-8 py-4 rounded-lg flex items-center justify-center gap-3 hover:text-neon-cyan transition">
                     <i class="fa-solid fa-envelope"></i> brucekuo0611@gmail.com
                 </a>
-                <div class="glass-card px-8 py-4 rounded-lg flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-phone"></i> +886 965-660-770
-                </div>
+                <!-- TODO: 等待使用者提供 resume.pdf（放於 個人品牌網站/resume.pdf）後即可正常下載 -->
+                <a href="resume.pdf" download target="_blank" rel="noopener noreferrer"
+                    class="glass-card px-8 py-4 rounded-lg flex items-center justify-center gap-3 hover:text-neon-cyan transition">
+                    <i class="fa-solid fa-file-arrow-down"></i> <span data-i18n="btn_download_resume">下載履歷 PDF</span>
+                </a>
             </div>
 
             <div class="flex justify-center gap-8 text-2xl text-gray-500 mb-8">
-                <a href="https://github.com/Bruce0611?tab=repositories" target="_blank"
+                <a href="https://github.com/Bruce0611?tab=repositories" target="_blank" rel="noopener noreferrer"
                     class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/kuo-cheng-an-2a4854371/" target="_blank"
-                    class="hover:text-blue-500 transition"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/scl_hin_11/" target="_blank"
+                    rel="noopener noreferrer" class="hover:text-blue-500 transition"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/scl_hin_11/" target="_blank" rel="noopener noreferrer"
                     class="hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.youtube.com/@scl_hin_11/videos" target="_blank"
+                <a href="https://www.youtube.com/@scl_hin_11/videos" target="_blank" rel="noopener noreferrer"
                     class="hover:text-red-500 transition"><i class="fa-brands fa-youtube"></i></a>
             </div>
 

@@ -88,7 +88,7 @@ html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transition: opacity 0.8s ease-out, visibility 0.8s;
+    transition: opacity 0.4s ease-out, visibility 0.4s;
 }
 
 .loader-bar {
@@ -104,7 +104,7 @@ html {
     width: 0%;
     height: 100%;
     background: var(--neon-cyan);
-    transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* Canvas */
@@ -164,6 +164,26 @@ html {
 
 .nav-item.active::after {
     width: 100%;
+}
+
+/* Mobile Nav Item */
+.nav-item-mobile {
+    display: block;
+    padding: 12px 8px;
+    color: #9ca3af;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: color 0.3s;
+}
+
+.nav-item-mobile:last-of-type {
+    border-bottom: none;
+}
+
+.nav-item-mobile:hover,
+.nav-item-mobile.active {
+    color: var(--neon-cyan);
 }
 
 /* Profile Glow */

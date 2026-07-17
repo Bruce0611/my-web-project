@@ -5,7 +5,7 @@ const translations = {
         nav_experience: "Experience", nav_education: "Education", nav_certs: "Certifications",
         nav_interests: "Interests", nav_contact: "Contact Me",
         hero_badge: "Hello, World! I'm Bruce",
-        hero_title_1: "Cross-domain Engineering", hero_title_2: "AI Tech Expert",
+        hero_title_1: "Cross-domain Engineering", hero_title_2: "AI-Driven R&D Engineer",
         hero_desc: "Innovative R&D Engineer bridging the gap between physical engineering and AI. Expert in CFD simulation and high-precision sensor calibration in wind tunnel experiments. Leveraged Python/MATLAB to develop custom PSD and vibration analysis tools, and led optimization projects that resulted in a 32% drag reduction. Holder of Professional AI certificates issued by NVIDIA/Google, I aim to utilize N8N and Claude Skills to construct highly optimized R&D workflows, customizing AI Agents to achieve end-to-end automation from raw data to technical insights and decision-making suggestions. A collaborative problem-solver committed to improving manufacturing yield through data-driven precision.",
         about_title: "About Me",
         about_c1_title: "Cross-domain Integration", about_c1_desc: "Seamlessly integrating knowledge from Civil Engineering to AI technology to build unique competitiveness.",
@@ -20,8 +20,12 @@ const translations = {
         skill_ai_desc: "Database Construction, Automated Deployment, Cloud Security & Compliance, Container Cluster Mgmt, AI Inference Optimization, Machine Learning.",
         portfolio_title: "Selected Projects",
         proj_1_title: "Intelligent Wind-Induced Vibration Control and Structural Performance Optimization System", proj_1_desc: "Integrates deep learning algorithms with structural dynamics theory to automatically identify aerodynamic instability zones in tall buildings. Through real-time optimization of flow control mechanisms (such as active damper parameters), effective drag coefficient reduction of 32% and suppression of perturbation intensity by 25.5% are achieved.",
+        proj_1_metric_1: "Drag Coefficient Reduction", proj_1_metric_2: "Perturbation Suppression",
+        proj_1_modal_points: "<li>Integrates deep learning algorithms with structural dynamics theory to automatically identify aerodynamic instability zones in tall buildings.</li><li>Real-time optimization of flow control mechanisms (such as active damper parameters) to dynamically adjust vibration control strategy.</li>",
         proj_2_title: "High-Fidelity CFD Simulation and Aerodynamic Optimization Platform for Tall Buildings", proj_2_desc: "Utilizes Large Eddy Simulation (LES) technology to reconstruct complex atmospheric boundary layer flow fields, providing deep analysis of surface pressure distribution and wake structures. Validates the efficacy of various aerodynamic optimization measures through numerical simulation, offering high-precision data support for wind-resistant design.",
+        proj_2_modal_points: "<li>Utilizes Large Eddy Simulation (LES) technology to reconstruct complex atmospheric boundary layer flow fields.</li><li>Provides deep analysis of surface pressure distribution and wake structures.</li><li>Validates the efficacy of various aerodynamic optimization measures through numerical simulation, offering high-precision data support for wind-resistant design.</li>",
         btn_view_project: "View Project Details",
+        btn_download_resume: "Download Resume (PDF)",
         exp_title: "Experience",
 
         // Exp 5 (Top)
@@ -31,7 +35,7 @@ const translations = {
         // Exp 4
         exp_4_role: "Resident Performer (Lead Vocalist)", exp_4_meta: "2024 – 2025 | Golden Tulip Fab Hotel New Taipei",
         exp_4_desc: "<p>• Delivered high-stakes live performances, demonstrating exceptional <span class='text-neon-cyan font-semibold'>Resilience</span> and professional <span class='text-neon-cyan font-semibold'>Public Speaking</span> skills in a fast-paced hospitality environment.</p><p>• Cultivated <span class='text-neon-cyan font-semibold'>Strategic Networking</span> and engaged with high-profile stakeholders during large-scale corporate events.</p>",
-        exp_4_award: '<a href="https://www.youtube.com" target="_blank" class="inline-flex items-center text-yellow-400 hover:text-yellow-300 text-sm font-bold transition-colors"><i class="fa-solid fa-trophy mr-2"></i> Award: Champion, Hwei-Zai Star Singing Competition (2025).</a>',
+        exp_4_award: '<span class="inline-flex items-center text-yellow-400 text-sm font-bold"><i class="fa-solid fa-trophy mr-2"></i> Award: Champion, Hwei-Zai Star Singing Competition (2025).</span>',
 
         // Exp 3
         exp_3_role: "International Student Basketball Coach", exp_3_meta: "2021 – 2025 | Taipei American School",
@@ -44,7 +48,7 @@ const translations = {
         // Exp 1
         exp_1_role: "Assistant Basketball Coach", exp_1_meta: "2018 – 2019 | THUHS Basketball Team",
         exp_1_desc: "<p>• Implemented <span class='text-neon-cyan font-semibold'>Data-driven Analytics</span> to evaluate player strengths, achieving <span class='text-neon-cyan font-semibold'>Role Optimization</span> through strategic positioning.</p><p>• Standardized training protocols (SOPs) to bolster team operational efficiency and tactical execution.</p>",
-        exp_1_award: '<a href="https://www.facebook.com" target="_blank" class="inline-flex items-center text-yellow-400 hover:text-yellow-300 text-sm font-bold transition-colors"><i class="fa-solid fa-trophy mr-2"></i> Award: Champion, Taichung Xitun District Chairman\'s Cup Basketball Tournament (2020).</a>',
+        exp_1_award: '<span class="inline-flex items-center text-yellow-400 text-sm font-bold"><i class="fa-solid fa-trophy mr-2"></i> Award: Champion, Taichung Xitun District Chairman\'s Cup Basketball Tournament (2020).</span>',
 
         // --- Updated Education (English) ---
         edu_title: "Education",
@@ -57,7 +61,7 @@ const translations = {
         edu_2_desc: "Pop Dance Club Art Designer, Project Competition Winner",
         // ---------------------------
 
-        certs_title: "Certifications", cert_1_name: "NVIDIA Deep Learning Certification", cert_1_desc: "Deep Learning Technology", cert_2_name: "GOOGLE SKILL Certification", cert_2_desc: "National Examination Qualified",
+        certs_title: "Certifications", cert_1_name: "NVIDIA Deep Learning Certification", cert_1_desc: "Deep Learning Technology", cert_2_name: "GOOGLE SKILL Certification", cert_2_desc: "Google Cloud Skills Certification", cert_3_name: "National Examination Qualified", cert_3_desc: "Civil Engineering (exact title TBD)",
         interests_title: "Achievements", int_1_name: "Hwei-Zai Star Singing", int_1_rank: "1st Place (2025)", int_2_name: "Taichung Xitun District Chairman's Cup", int_2_rank: "Champion (2020)",
         footer_title: "Let's Work Together", footer_desc: "Feel free to contact me for collaboration or technical exchange."
     },
@@ -66,8 +70,8 @@ const translations = {
         nav_experience: "工作經驗", nav_education: "教育背景", nav_certs: "認證證照",
         nav_interests: "個人興趣", nav_contact: "聯絡我",
         hero_badge: "Hello, World! I'm Bruce",
-        hero_title_1: "跨領域工程", hero_title_2: "AI 技術專家",
-        hero_desc: "具備土木底蘊與 AI 跨域實力的研發工程師，擅長將 CFD 與結構振動問題透過 BigQuery 轉化為大規模分析模型 。曾主導格柵優化專案，達成 25.5% 擾動降幅與 32% 減阻成效，具備將數值模擬導入 ML 進行自動化分析的核心實力 。<br><br>持有 NVIDIA 與 Google Cloud 專業認證 ，精通運用 BigQuery ML 處理海量實驗數據並縮短特徵提取週期 。熟練 Docker 與 GKE 容器化部署 ，能將預測模型轉化為高可用服務，符合 MLOps 監控需求 。具備 LLM 服務化基礎，能利用 Prompt 與 Agent 框架開發工程數據轉譯助手 ，實現從原始數據到技術洞察的端到端自動化 。<br><br>致力於將 AI 導入工程工作流，憑藉嚴謹邏輯與溝通轉譯能力，為製程穩定與良率提升提供精準洞察，是具備開發下一代 AI 系統實力的高效協作者 。",
+        hero_title_1: "跨領域工程", hero_title_2: "AI 應用研發",
+        hero_desc: "具備土木底蘊與 AI 跨域實力的研發工程師，擅長將 CFD 與結構振動問題透過 BigQuery 轉化為大規模分析模型。曾主導格柵優化專案，達成 25.5% 擾動降幅與 32% 減阻成效，具備將數值模擬導入 ML 進行自動化分析的核心實力。<br><br>持有 NVIDIA 與 Google Cloud 專業認證，精通運用 BigQuery ML 處理海量實驗數據並縮短特徵提取週期。熟練 Docker 與 GKE 容器化部署，能將預測模型轉化為高可用服務，符合 MLOps 監控需求。具備 LLM 服務化基礎，能利用 Prompt 與 Agent 框架開發工程數據轉譯助手，實現從原始數據到技術洞察的端到端自動化。<br><br>致力於將 AI 導入工程工作流，憑藉嚴謹邏輯與溝通轉譯能力，為製程穩定與良率提升提供精準洞察，是具備開發下一代 AI 系統實力的高效協作者。",
         about_title: "關於我",
         about_c1_title: "跨領域整合", about_c1_desc: "從土木工程到 AI 技術，無縫整合不同領域知識，打造獨特競爭力。",
         about_c2_title: "創新思維", about_c2_desc: "運用創新思維與技術工具，有效解決複雜的工程與技術挑戰，提升工作效率。",
@@ -81,8 +85,12 @@ const translations = {
         skill_ai_desc: "資料庫建構、自動化部署、雲端資安與合規、容器化叢集管理、AI 模型推論優化、機器學習。",
         portfolio_title: "專案作品",
         proj_1_title: "智慧型建築風振控制與結構性能優化系統", proj_1_desc: "整合深度學習算法與結構動力學理論，自動辨識高層建築之氣動不穩定區位。透過即時優化流場控制機制（如主動減振器參數），有效降低阻力係數達 32% 並抑制 25.5% 擾動強度。",
-        proj_2_title: "高精度 CFD 建築流場模擬與空氣動力優化平台", proj_2_desc: "運用大渦模擬 ($LES$) 技術重建複雜大氣邊界層流場，深度解析建築物表面的壓力分布與尾流結構。透過數值模擬驗證各種氣動優化手段之功效，為抗風設計提供高精確度的數據支撐。",
+        proj_1_metric_1: "阻力係數降低", proj_1_metric_2: "擾動強度抑制",
+        proj_1_modal_points: "<li>整合深度學習算法與結構動力學理論，自動辨識高層建築之氣動不穩定區位。</li><li>即時優化流場控制機制（如主動減振器參數），動態調整風振控制策略。</li>",
+        proj_2_title: "高精度 CFD 建築流場模擬與空氣動力優化平台", proj_2_desc: "運用大渦模擬 (LES) 技術重建複雜大氣邊界層流場，深度解析建築物表面的壓力分布與尾流結構。透過數值模擬驗證各種氣動優化手段之功效，為抗風設計提供高精確度的數據支撐。",
+        proj_2_modal_points: "<li>運用大渦模擬 (LES) 技術重建複雜大氣邊界層流場。</li><li>深度解析建築物表面的壓力分布與尾流結構。</li><li>透過數值模擬驗證各種氣動優化手段之功效，為抗風設計提供高精確度的數據支撐。</li>",
         btn_view_project: "查看專案詳情",
+        btn_download_resume: "下載履歷 PDF",
         exp_title: "工作經驗",
 
         // Exp 5 (Top)
@@ -92,7 +100,7 @@ const translations = {
         // Exp 4
         exp_4_role: "駐唱表演嘉賓", exp_4_meta: "2024 – 2025 | 淡水將捷金鬱金香酒店",
         exp_4_desc: "<p>• 在高壓環境下進行現場演出，具備卓越的 <span class='text-neon-cyan font-semibold'>抗壓性與公開演說 (Public Speaking)</span> 能力。</p><p>• 透過大型活動經營商業人脈。</p>",
-        exp_4_award: '<a href="https://www.youtube.com" target="_blank" class="inline-flex items-center text-yellow-400 hover:text-yellow-300 text-sm font-bold transition-colors"><i class="fa-solid fa-trophy mr-2"></i> 滬尾之星歌唱組 —— 第一名 (2025)</a>',
+        exp_4_award: '<span class="inline-flex items-center text-yellow-400 text-sm font-bold"><i class="fa-solid fa-trophy mr-2"></i> 滬尾之星歌唱組 —— 第一名 (2025)</span>',
 
         // Exp 3
         exp_3_role: "國際學生籃球教練", exp_3_meta: "2021 – 2025 | 天母美國學校",
@@ -105,7 +113,7 @@ const translations = {
         // Exp 1
         exp_1_role: "籃球助教", exp_1_meta: "2018 – 2019 | 東大附中籃球隊",
         exp_1_desc: "<p>• 導入數據化思維，分析球員優勢進行 <span class='text-neon-cyan font-semibold'>位置配置最佳化 (Role Optimization)</span>。</p><p>• 協助制定訓練 SOP，提升團隊執行效率。</p>",
-        exp_1_award: '<a href="https://www.facebook.com" target="_blank" class="inline-flex items-center text-yellow-400 hover:text-yellow-300 text-sm font-bold transition-colors"><i class="fa-solid fa-trophy mr-2"></i> 台中市西屯主委盃籃球賽 —— 第一名 (2020)</a>',
+        exp_1_award: '<span class="inline-flex items-center text-yellow-400 text-sm font-bold"><i class="fa-solid fa-trophy mr-2"></i> 台中市西屯主委盃籃球賽 —— 第一名 (2020)</span>',
 
         // --- Updated Education (Chinese) ---
         edu_title: "教育背景",
@@ -118,10 +126,15 @@ const translations = {
         edu_2_desc: "熱舞社美軒、專題競賽優勝",
         // ---------------------------
 
-        certs_title: "專業認證", cert_1_name: "NVIDIA 深度學習認證", cert_1_desc: "深度學習技術認證", cert_2_name: "GOOGLE SKILL 認證", cert_2_desc: "國家高考及格",
+        certs_title: "專業認證", cert_1_name: "NVIDIA 深度學習認證", cert_1_desc: "深度學習技術認證", cert_2_name: "GOOGLE SKILL 認證", cert_2_desc: "Google Cloud 技能認證", cert_3_name: "國家考試及格", cert_3_desc: "土木工程科（詳細名稱待確認）",
         interests_title: "個人成就", int_1_name: "滬尾之星歌唱組", int_1_rank: "第一名 (2025)", int_2_name: "西屯主委盃籃球", int_2_rank: "冠軍 (2020)",
         footer_title: "開始我們的合作", footer_desc: "無論是工程專案合作還是技術交流，歡迎隨時聯繫。"
     }
+};
+
+const pageTitles = {
+    zh: "郭正安 Bruce - 跨領域工程與 AI 專家",
+    en: "Bruce Kuo - Cross-domain Engineering & AI-Driven R&D"
 };
 
 function setLanguage(lang) {
@@ -139,7 +152,57 @@ function setLanguage(lang) {
             el.innerHTML = translations[lang][key];
         }
     });
+
+    // 同步 <title> 與 <html lang>
+    document.title = pageTitles[lang];
+    document.documentElement.lang = lang === 'zh' ? 'zh-TW' : 'en';
 }
+
+// --- 手機版導覽選單 ---
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('mobile-menu-icon');
+    const btn = document.getElementById('mobile-menu-btn');
+    const willOpen = menu.classList.contains('hidden');
+    menu.classList.toggle('hidden', !willOpen);
+    menu.classList.toggle('flex', willOpen);
+    icon.classList.toggle('fa-bars', !willOpen);
+    icon.classList.toggle('fa-xmark', willOpen);
+    btn.setAttribute('aria-expanded', String(willOpen));
+}
+
+function closeMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('mobile-menu-icon');
+    const btn = document.getElementById('mobile-menu-btn');
+    menu.classList.add('hidden');
+    menu.classList.remove('flex');
+    icon.classList.remove('fa-xmark');
+    icon.classList.add('fa-bars');
+    btn.setAttribute('aria-expanded', 'false');
+}
+
+// --- 專案詳情 Modal ---
+function openProjectModal(id) {
+    document.querySelectorAll('.project-modal').forEach(m => m.classList.add('hidden'));
+    document.getElementById(id).classList.remove('hidden');
+    const overlay = document.getElementById('modal-overlay');
+    overlay.classList.remove('hidden');
+    overlay.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProjectModal(e) {
+    if (e && e.target !== e.currentTarget) return;
+    const overlay = document.getElementById('modal-overlay');
+    overlay.classList.add('hidden');
+    overlay.classList.remove('flex');
+    document.body.style.overflow = '';
+}
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeProjectModal();
+});
 
 // --- 初始化 ---
 window.addEventListener('load', () => {
@@ -147,11 +210,11 @@ window.addEventListener('load', () => {
     const progress = document.getElementById('progress');
     const loader = document.getElementById('loader');
     if (progress) {
-        setTimeout(() => { progress.style.width = '50%'; }, 100);
-        setTimeout(() => { progress.style.width = '100%'; }, 800);
+        setTimeout(() => { progress.style.width = '60%'; }, 50);
+        setTimeout(() => { progress.style.width = '100%'; }, 300);
         setTimeout(() => {
             loader.style.opacity = '0'; loader.style.visibility = 'hidden';
-        }, 1500);
+        }, 500);
     }
 
     // 讀取語言設定
@@ -176,7 +239,7 @@ window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        if (pageYOffset >= (sectionTop - 250)) current = section.getAttribute('id');
+        if (window.scrollY >= (sectionTop - 250)) current = section.getAttribute('id');
     });
     navLinks.forEach(link => {
         link.classList.remove('active');
@@ -186,10 +249,12 @@ window.addEventListener('scroll', () => {
 
 // Canvas Animation
 const canvas = document.getElementById('fluid-canvas');
-if (canvas) {
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (canvas && !prefersReducedMotion) {
     const ctx = canvas.getContext('2d');
     let w, h, particles = [];
     let mouse = { x: null, y: null };
+    let animationId = null;
 
     function resize() { w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; }
     window.addEventListener('resize', resize); resize();
@@ -221,7 +286,8 @@ if (canvas) {
         }
         draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fillStyle = this.c; ctx.fill(); }
     }
-    for (let i = 0; i < 200; i++) particles.push(new P());
+    const particleCount = window.innerWidth < 768 ? 60 : 200;
+    for (let i = 0; i < particleCount; i++) particles.push(new P());
 
     function animate() {
         ctx.fillStyle = 'rgba(11, 12, 16, 0.1)'; ctx.fillRect(0, 0, w, h);
@@ -243,7 +309,17 @@ if (canvas) {
                 }
             }
         });
-        requestAnimationFrame(animate);
+        animationId = requestAnimationFrame(animate);
     }
     animate();
+
+    // 分頁不可見時暫停動畫，節省手機電量
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            if (animationId) cancelAnimationFrame(animationId);
+            animationId = null;
+        } else if (!animationId) {
+            animate();
+        }
+    });
 }
