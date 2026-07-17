@@ -5,7 +5,7 @@ const translations = {
         nav_experience: "Experience", nav_education: "Education", nav_certs: "Certifications",
         nav_interests: "Interests", nav_contact: "Contact Me",
         hero_badge: "Hello, World! I'm Bruce",
-        hero_title_1: "Cross-domain Engineering", hero_title_2: "AI Tech Expert",
+        hero_title_1: "Cross-domain Engineering", hero_title_2: "AI-Driven R&D Engineer",
         hero_desc: "Innovative R&D Engineer bridging the gap between physical engineering and AI. Expert in CFD simulation and high-precision sensor calibration in wind tunnel experiments. Leveraged Python/MATLAB to develop custom PSD and vibration analysis tools, and led optimization projects that resulted in a 32% drag reduction. Holder of Professional AI certificates issued by NVIDIA/Google, I aim to utilize N8N and Claude Skills to construct highly optimized R&D workflows, customizing AI Agents to achieve end-to-end automation from raw data to technical insights and decision-making suggestions. A collaborative problem-solver committed to improving manufacturing yield through data-driven precision.",
         about_title: "About Me",
         about_c1_title: "Cross-domain Integration", about_c1_desc: "Seamlessly integrating knowledge from Civil Engineering to AI technology to build unique competitiveness.",
@@ -22,6 +22,7 @@ const translations = {
         proj_1_title: "Intelligent Wind-Induced Vibration Control and Structural Performance Optimization System", proj_1_desc: "Integrates deep learning algorithms with structural dynamics theory to automatically identify aerodynamic instability zones in tall buildings. Through real-time optimization of flow control mechanisms (such as active damper parameters), effective drag coefficient reduction of 32% and suppression of perturbation intensity by 25.5% are achieved.",
         proj_2_title: "High-Fidelity CFD Simulation and Aerodynamic Optimization Platform for Tall Buildings", proj_2_desc: "Utilizes Large Eddy Simulation (LES) technology to reconstruct complex atmospheric boundary layer flow fields, providing deep analysis of surface pressure distribution and wake structures. Validates the efficacy of various aerodynamic optimization measures through numerical simulation, offering high-precision data support for wind-resistant design.",
         btn_view_project: "View Project Details",
+        btn_download_resume: "Download Resume (PDF)",
         exp_title: "Experience",
 
         // Exp 5 (Top)
@@ -31,7 +32,7 @@ const translations = {
         // Exp 4
         exp_4_role: "Resident Performer (Lead Vocalist)", exp_4_meta: "2024 – 2025 | Golden Tulip Fab Hotel New Taipei",
         exp_4_desc: "<p>• Delivered high-stakes live performances, demonstrating exceptional <span class='text-neon-cyan font-semibold'>Resilience</span> and professional <span class='text-neon-cyan font-semibold'>Public Speaking</span> skills in a fast-paced hospitality environment.</p><p>• Cultivated <span class='text-neon-cyan font-semibold'>Strategic Networking</span> and engaged with high-profile stakeholders during large-scale corporate events.</p>",
-        exp_4_award: '<a href="https://www.youtube.com" target="_blank" class="inline-flex items-center text-yellow-400 hover:text-yellow-300 text-sm font-bold transition-colors"><i class="fa-solid fa-trophy mr-2"></i> Award: Champion, Hwei-Zai Star Singing Competition (2025).</a>',
+        exp_4_award: '<span class="inline-flex items-center text-yellow-400 text-sm font-bold"><i class="fa-solid fa-trophy mr-2"></i> Award: Champion, Hwei-Zai Star Singing Competition (2025).</span>',
 
         // Exp 3
         exp_3_role: "International Student Basketball Coach", exp_3_meta: "2021 – 2025 | Taipei American School",
@@ -44,7 +45,7 @@ const translations = {
         // Exp 1
         exp_1_role: "Assistant Basketball Coach", exp_1_meta: "2018 – 2019 | THUHS Basketball Team",
         exp_1_desc: "<p>• Implemented <span class='text-neon-cyan font-semibold'>Data-driven Analytics</span> to evaluate player strengths, achieving <span class='text-neon-cyan font-semibold'>Role Optimization</span> through strategic positioning.</p><p>• Standardized training protocols (SOPs) to bolster team operational efficiency and tactical execution.</p>",
-        exp_1_award: '<a href="https://www.facebook.com" target="_blank" class="inline-flex items-center text-yellow-400 hover:text-yellow-300 text-sm font-bold transition-colors"><i class="fa-solid fa-trophy mr-2"></i> Award: Champion, Taichung Xitun District Chairman\'s Cup Basketball Tournament (2020).</a>',
+        exp_1_award: '<span class="inline-flex items-center text-yellow-400 text-sm font-bold"><i class="fa-solid fa-trophy mr-2"></i> Award: Champion, Taichung Xitun District Chairman\'s Cup Basketball Tournament (2020).</span>',
 
         // --- Updated Education (English) ---
         edu_title: "Education",
@@ -57,7 +58,13 @@ const translations = {
         edu_2_desc: "Pop Dance Club Art Designer, Project Competition Winner",
         // ---------------------------
 
-        certs_title: "Certifications", cert_1_name: "NVIDIA Deep Learning Certification", cert_1_desc: "Deep Learning Technology", cert_2_name: "GOOGLE SKILL Certification", cert_2_desc: "National Examination Qualified",
+        certs_title: "Certifications",
+        cert_nvidia_name: "NVIDIA Deep Learning Certification", cert_nvidia_desc: "Transformer NLP, Jetson Nano, Isaac Sim robotics simulation & more — 4 official certificates, 16 courses completed",
+        cert_google_name: "GOOGLE SKILL Certification", cert_google_desc: "Google Career Certificates Program certificates · 72 Cloud Skills Boost courses/badges (BigQuery, Kubernetes, Gemini for Workspace, etc.)",
+        cert_anthropic_name: "ANTHROPIC ACADEMY Certification", cert_anthropic_desc: "Claude Code 101, Model Context Protocol (MCP) — official course completions",
+        cert_mathworks_name: "MATHWORKS Certification", cert_mathworks_desc: "Deep Learning Onramp course certificate",
+        cert_tku_name: "Tamkang University AI Innovation College Training Certificates", cert_tku_desc: "Azure AI Engineer certification course, Multimodal AI Applications hands-on workshop",
+        cert_other_name: "Other Institutional Courses", cert_other_desc: "Institute for Information Industry \"Riding the AI Wave\" certificate, AI Business Applications & Smart Education Platform workshop",
         interests_title: "Achievements", int_1_name: "Hwei-Zai Star Singing", int_1_rank: "1st Place (2025)", int_2_name: "Taichung Xitun District Chairman's Cup", int_2_rank: "Champion (2020)",
         footer_title: "Let's Work Together", footer_desc: "Feel free to contact me for collaboration or technical exchange."
     },
@@ -66,8 +73,8 @@ const translations = {
         nav_experience: "工作經驗", nav_education: "教育背景", nav_certs: "認證證照",
         nav_interests: "個人興趣", nav_contact: "聯絡我",
         hero_badge: "Hello, World! I'm Bruce",
-        hero_title_1: "跨領域工程", hero_title_2: "AI 技術專家",
-        hero_desc: "具備土木底蘊與 AI 跨域實力的研發工程師，擅長將 CFD 與結構振動問題透過 BigQuery 轉化為大規模分析模型 。曾主導格柵優化專案，達成 25.5% 擾動降幅與 32% 減阻成效，具備將數值模擬導入 ML 進行自動化分析的核心實力 。<br><br>持有 NVIDIA 與 Google Cloud 專業認證 ，精通運用 BigQuery ML 處理海量實驗數據並縮短特徵提取週期 。熟練 Docker 與 GKE 容器化部署 ，能將預測模型轉化為高可用服務，符合 MLOps 監控需求 。具備 LLM 服務化基礎，能利用 Prompt 與 Agent 框架開發工程數據轉譯助手 ，實現從原始數據到技術洞察的端到端自動化 。<br><br>致力於將 AI 導入工程工作流，憑藉嚴謹邏輯與溝通轉譯能力，為製程穩定與良率提升提供精準洞察，是具備開發下一代 AI 系統實力的高效協作者 。",
+        hero_title_1: "跨領域工程", hero_title_2: "AI 應用研發",
+        hero_desc: "具備土木底蘊與 AI 跨域實力的研發工程師，擅長將 CFD 與結構振動問題透過 BigQuery 轉化為大規模分析模型。曾主導格柵優化專案，達成 25.5% 擾動降幅與 32% 減阻成效，具備將數值模擬導入 ML 進行自動化分析的核心實力。<br><br>持有 NVIDIA 與 Google Cloud 專業認證，精通運用 BigQuery ML 處理海量實驗數據並縮短特徵提取週期。熟練 Docker 與 GKE 容器化部署，能將預測模型轉化為高可用服務，符合 MLOps 監控需求。具備 LLM 服務化基礎，能利用 Prompt 與 Agent 框架開發工程數據轉譯助手，實現從原始數據到技術洞察的端到端自動化。<br><br>致力於將 AI 導入工程工作流，憑藉嚴謹邏輯與溝通轉譯能力，為製程穩定與良率提升提供精準洞察，是具備開發下一代 AI 系統實力的高效協作者。",
         about_title: "關於我",
         about_c1_title: "跨領域整合", about_c1_desc: "從土木工程到 AI 技術，無縫整合不同領域知識，打造獨特競爭力。",
         about_c2_title: "創新思維", about_c2_desc: "運用創新思維與技術工具，有效解決複雜的工程與技術挑戰，提升工作效率。",
@@ -81,8 +88,9 @@ const translations = {
         skill_ai_desc: "資料庫建構、自動化部署、雲端資安與合規、容器化叢集管理、AI 模型推論優化、機器學習。",
         portfolio_title: "專案作品",
         proj_1_title: "智慧型建築風振控制與結構性能優化系統", proj_1_desc: "整合深度學習算法與結構動力學理論，自動辨識高層建築之氣動不穩定區位。透過即時優化流場控制機制（如主動減振器參數），有效降低阻力係數達 32% 並抑制 25.5% 擾動強度。",
-        proj_2_title: "高精度 CFD 建築流場模擬與空氣動力優化平台", proj_2_desc: "運用大渦模擬 ($LES$) 技術重建複雜大氣邊界層流場，深度解析建築物表面的壓力分布與尾流結構。透過數值模擬驗證各種氣動優化手段之功效，為抗風設計提供高精確度的數據支撐。",
+        proj_2_title: "高精度 CFD 建築流場模擬與空氣動力優化平台", proj_2_desc: "運用大渦模擬 (LES) 技術重建複雜大氣邊界層流場，深度解析建築物表面的壓力分布與尾流結構。透過數值模擬驗證各種氣動優化手段之功效，為抗風設計提供高精確度的數據支撐。",
         btn_view_project: "查看專案詳情",
+        btn_download_resume: "下載履歷 PDF",
         exp_title: "工作經驗",
 
         // Exp 5 (Top)
@@ -92,7 +100,7 @@ const translations = {
         // Exp 4
         exp_4_role: "駐唱表演嘉賓", exp_4_meta: "2024 – 2025 | 淡水將捷金鬱金香酒店",
         exp_4_desc: "<p>• 在高壓環境下進行現場演出，具備卓越的 <span class='text-neon-cyan font-semibold'>抗壓性與公開演說 (Public Speaking)</span> 能力。</p><p>• 透過大型活動經營商業人脈。</p>",
-        exp_4_award: '<a href="https://www.youtube.com" target="_blank" class="inline-flex items-center text-yellow-400 hover:text-yellow-300 text-sm font-bold transition-colors"><i class="fa-solid fa-trophy mr-2"></i> 滬尾之星歌唱組 —— 第一名 (2025)</a>',
+        exp_4_award: '<span class="inline-flex items-center text-yellow-400 text-sm font-bold"><i class="fa-solid fa-trophy mr-2"></i> 滬尾之星歌唱組 —— 第一名 (2025)</span>',
 
         // Exp 3
         exp_3_role: "國際學生籃球教練", exp_3_meta: "2021 – 2025 | 天母美國學校",
@@ -105,7 +113,7 @@ const translations = {
         // Exp 1
         exp_1_role: "籃球助教", exp_1_meta: "2018 – 2019 | 東大附中籃球隊",
         exp_1_desc: "<p>• 導入數據化思維，分析球員優勢進行 <span class='text-neon-cyan font-semibold'>位置配置最佳化 (Role Optimization)</span>。</p><p>• 協助制定訓練 SOP，提升團隊執行效率。</p>",
-        exp_1_award: '<a href="https://www.facebook.com" target="_blank" class="inline-flex items-center text-yellow-400 hover:text-yellow-300 text-sm font-bold transition-colors"><i class="fa-solid fa-trophy mr-2"></i> 台中市西屯主委盃籃球賽 —— 第一名 (2020)</a>',
+        exp_1_award: '<span class="inline-flex items-center text-yellow-400 text-sm font-bold"><i class="fa-solid fa-trophy mr-2"></i> 台中市西屯主委盃籃球賽 —— 第一名 (2020)</span>',
 
         // --- Updated Education (Chinese) ---
         edu_title: "教育背景",
@@ -118,7 +126,13 @@ const translations = {
         edu_2_desc: "熱舞社美軒、專題競賽優勝",
         // ---------------------------
 
-        certs_title: "專業認證", cert_1_name: "NVIDIA 深度學習認證", cert_1_desc: "深度學習技術認證", cert_2_name: "GOOGLE SKILL 認證", cert_2_desc: "國家高考及格",
+        certs_title: "專業認證",
+        cert_nvidia_name: "NVIDIA 深度學習認證", cert_nvidia_desc: "Transformer NLP、Jetson Nano、Isaac Sim 機器人模擬等，4 張正式證書．16 門課程完課",
+        cert_google_name: "GOOGLE SKILL 認證", cert_google_desc: "數位人才探索計畫結業證書．Cloud Skills Boost 72 項課程／徽章（BigQuery、Kubernetes、Gemini for Workspace 等）",
+        cert_anthropic_name: "ANTHROPIC ACADEMY 認證", cert_anthropic_desc: "Claude Code 101、Model Context Protocol (MCP) 官方課程完課",
+        cert_mathworks_name: "MATHWORKS 認證", cert_mathworks_desc: "Deep Learning Onramp 課程證書",
+        cert_tku_name: "淡江大學 AI 創智學院研習證明", cert_tku_desc: "Azure AI 工程師認證課程、多模態 AI 應用實作工作坊",
+        cert_other_name: "其他機構課程", cert_other_desc: "資策會「駕馭 AI 新浪潮」結業證書、AI 商務應用與智慧教育平台工作坊",
         interests_title: "個人成就", int_1_name: "滬尾之星歌唱組", int_1_rank: "第一名 (2025)", int_2_name: "西屯主委盃籃球", int_2_rank: "冠軍 (2020)",
         footer_title: "開始我們的合作", footer_desc: "無論是工程專案合作還是技術交流，歡迎隨時聯繫。"
     }
