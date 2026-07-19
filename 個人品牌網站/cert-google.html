@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOOGLE SKILL 認證 - 郭正安 Bruce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'tech-dark': '#0B0C10',
+                        'neon-cyan': '#66FCF1',
+                        'neon-dim': '#45A29E',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'Inter', 'sans-serif'],
+                        mono: ['Roboto Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="antialiased bg-tech-dark text-gray-300">
+    <div class="max-w-5xl mx-auto px-6 py-12">
+        <div class="flex items-center justify-between mb-8">
+            <a href="index.html#certifications"
+                class="inline-flex items-center gap-2 text-neon-cyan hover:text-white font-mono text-sm transition-colors">
+                <i class="fa-solid fa-arrow-left"></i> <span data-i18n="back_home">返回首頁</span>
+            </a>
+            <div class="lang-switch">
+                <span class="lang-opt active" id="lang-tw" onclick="setCertLanguage('zh')">繁</span>
+                <span class="text-gray-600">/</span>
+                <span class="lang-opt" id="lang-en" onclick="setCertLanguage('en')">EN</span>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-4 mb-4">
+            <i class="fa-solid fa-id-card text-neon-cyan text-3xl"></i>
+            <h1 class="text-3xl md:text-4xl font-bold text-white" data-i18n="google_h1">GOOGLE SKILL 認證</h1>
+        </div>
+        <p class="text-gray-400 mb-6" data-i18n="google_intro">以下為所有結業證書、技能徽章與課程完課紀錄的原始截圖，皆為 cheng an kuo（郭正安）本人取得。</p>
+
+        <div class="glass-card rounded-xl p-5 mb-10 flex flex-col sm:flex-row gap-3">
+            <a href="https://www.credly.com/users/cheng-kuo.08b67a5a/badges" target="_blank" rel="noopener"
+                class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-neon-cyan/10 border border-neon-cyan text-neon-cyan rounded-full text-sm font-bold hover:bg-neon-cyan hover:text-tech-dark transition-all">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="google_link1">在 Credly
+                    查看已驗證徽章（免登入）</span>
+            </a>
+            <a href="https://www.cloudskillsboost.google/" target="_blank" rel="noopener"
+                class="inline-flex items-center justify-center gap-2 px-5 py-2.5 border border-gray-700 text-gray-400 rounded-full text-sm font-bold hover:border-neon-cyan hover:text-neon-cyan transition-all">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="google_link2">前往 Google Cloud
+                    Skills Boost（需登入查看個人紀錄）</span>
+            </a>
+        </div>
+
+        <h2 class="text-lg font-bold text-neon-cyan mb-4" data-i18n="google_h2_1">Google 數位人才探索計畫．結業證書</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/cert-ai-generalists-en.png" target="_blank" rel="noopener"><img src="certs/google/cert-ai-generalists-en.png" class="w-full" alt="AI for Generalists Certificate" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="google_cap_1">AI for Generalists — 證書編號
+                    1OCR2FFD（英文版）</figcaption>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/cert-ai-generalists-zh.png" target="_blank" rel="noopener"><img src="certs/google/cert-ai-generalists-zh.png" class="w-full" alt="AI 職場通識學程結業證書" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="google_cap_2">AI 職場通識學程結業證書 — 證書編號
+                    1OCR2FFD（中文版）</figcaption>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/cert-google-cloud-en.png" target="_blank" rel="noopener"><img src="certs/google/cert-google-cloud-en.png" class="w-full" alt="Google Cloud Certificate" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="google_cap_3">Google Cloud — 證書編號
+                    1OCR2FFD（英文版）</figcaption>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/cert-google-cloud-zh.png" target="_blank" rel="noopener"><img src="certs/google/cert-google-cloud-zh.png" class="w-full" alt="Google Cloud 學程結業證書" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="google_cap_4">Google Cloud 學程結業證書 — 證書編號
+                    1OCR2FFD（中文版）</figcaption>
+            </figure>
+        </div>
+
+        <h2 class="text-lg font-bold text-neon-cyan mb-4" data-i18n="google_h2_2">Google Cloud Skill Badge（Credly
+            可驗證徽章）</h2>
+        <div class="grid grid-cols-1 gap-6 mb-12">
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/credly-badge-wallet.png" target="_blank" rel="noopener"><img src="certs/google/credly-badge-wallet.png" class="w-full" alt="Credly Badge Wallet" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400"><span data-i18n="google_cap_5_pre">Credly Badge Wallet —
+                        8 個技能徽章（Prompt Design in Vertex AI、Analyze BigQuery Data in Connected Sheets、Classify
+                        Images with TensorFlow、Derive Insights from BigQuery Data、Get Started with Google Workspace
+                        Tools、Integrate BigQuery Data and Google Workspace using Apps Script、Manage Kubernetes in
+                        Google Cloud、Secure BigLake Data） — </span>
+                    <a href="https://www.credly.com/users/cheng-kuo.08b67a5a/badges" target="_blank" rel="noopener"
+                        class="text-neon-cyan hover:underline" data-i18n="google_cap_5_link">在 Credly 查看</a>
+                </figcaption>
+            </figure>
+        </div>
+
+        <h2 class="text-lg font-bold text-neon-cyan mb-4" data-i18n="google_h2_3">Google Cloud Skills
+            Boost「My Learning」已完成課程（共 68 項）</h2>
+        <p class="text-gray-500 text-sm mb-4" data-i18n="google_note1">以下 12 張截圖為「My Learning」頁面完整紀錄（2025/10 –
+            2026/06），每張含 6 項已完成課程／徽章。</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/mylearning-grid-01.png" target="_blank" rel="noopener"><img src="certs/google/mylearning-grid-01.png" class="w-full" alt="My Learning 完成紀錄 1" loading="lazy"></a>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/mylearning-grid-02.png" target="_blank" rel="noopener"><img src="certs/google/mylearning-grid-02.png" class="w-full" alt="My Learning 完成紀錄 2" loading="lazy"></a>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/mylearning-grid-03.png" target="_blank" rel="noopener"><img src="certs/google/mylearning-grid-03.png" class="w-full" alt="My Learning 完成紀錄 3" loading="lazy"></a>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/mylearning-grid-04.png" target="_blank" rel="noopener"><img src="certs/google/mylearning-grid-04.png" class="w-full" alt="My Learning 完成紀錄 4" loading="lazy"></a>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/mylearning-grid-05.png" target="_blank" rel="noopener"><img src="certs/google/mylearning-grid-05.png" class="w-full" alt="My Learning 完成紀錄 5" loading="lazy"></a>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/mylearning-grid-06.png" target="_blank" rel="noopener"><img src="certs/google/mylearning-grid-06.png" class="w-full" alt="My Learning 完成紀錄 6" loading="lazy"></a>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/mylearning-grid-07.png" target="_blank" rel="noopener"><img src="certs/google/mylearning-grid-07.png" class="w-full" alt="My Learning 完成紀錄 7" loading="lazy"></a>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/mylearning-grid-08.png" target="_blank" rel="noopener"><img src="certs/google/mylearning-grid-08.png" class="w-full" alt="My Learning 完成紀錄 8" loading="lazy"></a>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/mylearning-grid-09.png" target="_blank" rel="noopener"><img src="certs/google/mylearning-grid-09.png" class="w-full" alt="My Learning 完成紀錄 9" loading="lazy"></a>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/mylearning-grid-10.png" target="_blank" rel="noopener"><img src="certs/google/mylearning-grid-10.png" class="w-full" alt="My Learning 完成紀錄 10" loading="lazy"></a>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/mylearning-grid-11.png" target="_blank" rel="noopener"><img src="certs/google/mylearning-grid-11.png" class="w-full" alt="My Learning 完成紀錄 11" loading="lazy"></a>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/mylearning-grid-12.png" target="_blank" rel="noopener"><img src="certs/google/mylearning-grid-12.png" class="w-full" alt="My Learning 完成紀錄 12" loading="lazy"></a>
+            </figure>
+        </div>
+        <div class="grid grid-cols-1 gap-6 mb-12">
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/skill-wallet-tags.png" target="_blank" rel="noopener"><img src="certs/google/skill-wallet-tags.png" class="w-full" alt="Google Cloud Skills Boost 技能標籤" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="google_cap_6">Skill Wallet
+                    官方技能標籤彙整（由上述課程／徽章自動彙整而成）</figcaption>
+            </figure>
+        </div>
+
+        <h2 class="text-lg font-bold text-neon-cyan mb-4" data-i18n="google_h2_4">其他 Google 認證</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/cert-ads-ai-performance.png" target="_blank" rel="noopener"><img src="certs/google/cert-ads-ai-performance.png" class="w-full" alt="AI 技術輔助高效廣告認證" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="google_cap_7">AI 技術輔助高效廣告認證（Google Ads
+                    AI-Powered Performance）— Google (Skillshop)，發證 2026/06/25，效期至 2027/06/25</figcaption>
+                <!-- TODO: 等待使用者提供完整的 Google Skillshop 憑證錢包網址，補上查看連結 -->
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/google/cert-kubernetes-engine-ispan.png" target="_blank" rel="noopener"><img src="certs/google/cert-kubernetes-engine-ispan.png" class="w-full"
+                    alt="Getting Started with Google Kubernetes Engine" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="google_cap_8">Getting Started with Google
+                    Kubernetes Engine — iSpan × Google Cloud，台北，2025/11/06</figcaption>
+            </figure>
+        </div>
+    </div>
+    <script>const CERT_PAGE = 'google';</script>
+    <script src="cert-i18n.js"></script>
+</body>
+
+</html>

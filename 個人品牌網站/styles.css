@@ -24,6 +24,21 @@ html {
     scroll-padding-top: 90px;
 }
 
+/* About 卡片點擊展開 */
+#about-detail-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#about-detail-panel.about-detail-expanded {
+    grid-template-rows: 1fr;
+}
+
+.about-detail-inner {
+    overflow: hidden;
+}
+
 /* Animations */
 @keyframes fadeInUp {
     0% { opacity: 0; transform: translateY(20px); }

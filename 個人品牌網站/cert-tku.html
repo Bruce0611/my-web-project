@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淡江大學 AI 創智學院研習證明 - 郭正安 Bruce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'tech-dark': '#0B0C10',
+                        'neon-cyan': '#66FCF1',
+                        'neon-dim': '#45A29E',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'Inter', 'sans-serif'],
+                        mono: ['Roboto Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="antialiased bg-tech-dark text-gray-300">
+    <div class="max-w-5xl mx-auto px-6 py-12">
+        <div class="flex items-center justify-between mb-8">
+            <a href="index.html#certifications"
+                class="inline-flex items-center gap-2 text-neon-cyan hover:text-white font-mono text-sm transition-colors">
+                <i class="fa-solid fa-arrow-left"></i> <span data-i18n="back_home">返回首頁</span>
+            </a>
+            <div class="lang-switch">
+                <span class="lang-opt active" id="lang-tw" onclick="setCertLanguage('zh')">繁</span>
+                <span class="text-gray-600">/</span>
+                <span class="lang-opt" id="lang-en" onclick="setCertLanguage('en')">EN</span>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-4 mb-4">
+            <i class="fa-solid fa-graduation-cap text-cyan-400 text-3xl"></i>
+            <h1 class="text-3xl md:text-4xl font-bold text-white" data-i18n="tku_h1">淡江大學 AI 創智學院研習證明</h1>
+        </div>
+        <p class="text-gray-400 mb-10" data-i18n="tku_intro">以下為研習證明原始截圖，為郭正安本人取得。</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/tku/cert-azure-ai-engineer.png" target="_blank" rel="noopener"><img src="certs/tku/cert-azure-ai-engineer.png" class="w-full" alt="AI-102 微軟認證線上課程" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="tku_cap_1">【AI-102】微軟認證線上課程：如何成為 Azure AI
+                    工程師？— 6 小時研習，2026/06/18，院字第11420012號</figcaption>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/tku/cert-multimodal-ai-workshop.png" target="_blank" rel="noopener"><img src="certs/tku/cert-multimodal-ai-workshop.png" class="w-full" alt="AI 實作體驗工作坊：多模態 AI 應用" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="tku_cap_2">【AI 實作體驗工作坊】：多模態 AI 應用 — 2
+                    小時研習，2026/06/18，院字第11420272號</figcaption>
+            </figure>
+        </div>
+    </div>
+    <script>const CERT_PAGE = 'tku';</script>
+    <script src="cert-i18n.js"></script>
+</body>
+
+</html>

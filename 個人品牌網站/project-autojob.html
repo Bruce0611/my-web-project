@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 自動求職系統 - 郭正安 Bruce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'tech-dark': '#0B0C10',
+                        'neon-cyan': '#66FCF1',
+                        'neon-dim': '#45A29E',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'Inter', 'sans-serif'],
+                        mono: ['Roboto Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="antialiased bg-tech-dark text-gray-300">
+    <div class="max-w-4xl mx-auto px-6 py-12">
+        <div class="flex items-center justify-between mb-8">
+            <a href="index.html#portfolio"
+                class="inline-flex items-center gap-2 text-neon-cyan hover:text-white font-mono text-sm transition-colors">
+                <i class="fa-solid fa-arrow-left"></i> <span data-i18n="back_home">返回首頁</span>
+            </a>
+            <div class="lang-switch">
+                <span class="lang-opt active" id="lang-tw" onclick="setCertLanguage('zh')">繁</span>
+                <span class="text-gray-600">/</span>
+                <span class="lang-opt" id="lang-en" onclick="setCertLanguage('en')">EN</span>
+            </div>
+        </div>
+
+        <!-- 頁首 -->
+        <div class="flex items-center gap-4 mb-4">
+            <i class="fa-solid fa-robot text-purple-400 text-3xl"></i>
+            <h1 class="text-3xl md:text-4xl font-bold text-white" data-i18n="autojob_h1">AI 自動求職系統</h1>
+        </div>
+        <p class="text-base md:text-lg text-gray-400 mb-10 leading-relaxed border-l-4 border-neon-dim pl-4 md:whitespace-nowrap"
+            data-i18n="autojob_subtitle">
+            用 Claude Code 打造的端到端求職自動化工作流 —— 人只負責做決策。
+        </p>
+
+        <!-- 一目瞭然數據卡 -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-16">
+            <div class="glass-card rounded-xl p-4 text-center border-t-2 border-neon-cyan">
+                <i class="fa-solid fa-building text-neon-cyan text-lg mb-2"></i>
+                <div class="text-2xl font-bold text-neon-cyan">60+</div>
+                <div class="text-[11px] text-gray-400 mt-1" data-i18n="autojob_stat_1">家企業客製履歷與求職信</div>
+            </div>
+            <div class="glass-card rounded-xl p-4 text-center border-t-2 border-blue-400">
+                <i class="fa-solid fa-arrows-rotate text-blue-400 text-lg mb-2"></i>
+                <div class="text-2xl font-bold text-blue-400">2</div>
+                <div class="text-[11px] text-gray-400 mt-1" data-i18n="autojob_stat_2">個全自動排程</div>
+            </div>
+            <div class="glass-card rounded-xl p-4 text-center border-t-2 border-purple-400">
+                <i class="fa-solid fa-magnifying-glass text-purple-400 text-lg mb-2"></i>
+                <div class="text-2xl font-bold text-purple-400" data-i18n="autojob_stat_3_value">數十筆</div>
+                <div class="text-[11px] text-gray-400 mt-1" data-i18n="autojob_stat_3">核實在招職缺</div>
+            </div>
+            <div class="glass-card rounded-xl p-4 text-center border-t-2 border-green-400">
+                <i class="fa-solid fa-shield-halved text-green-400 text-lg mb-2"></i>
+                <div class="text-2xl font-bold text-green-400">100%</div>
+                <div class="text-[11px] text-gray-400 mt-1" data-i18n="autojob_stat_4">客製履歷通過誠信 QA</div>
+            </div>
+        </div>
+
+        <!-- 開發理念 -->
+        <div class="flex items-center gap-4 mb-8">
+            <h2 class="text-2xl font-bold text-white" data-i18n="autojob_philosophy_title">開發理念</h2>
+            <div class="h-1 flex-grow bg-gradient-to-r from-neon-cyan to-transparent rounded"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div class="glass-card p-8 rounded-2xl text-center group">
+                <div
+                    class="w-16 h-16 mx-auto bg-blue-500/20 rounded-full flex items-center justify-center text-2xl mb-6 text-blue-400 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <h3 class="text-white font-bold mb-3" data-i18n="autojob_phil_1_title">人做決策，系統做重複</h3>
+                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="autojob_phil_1_desc">
+                    所有耗時重複的環節（搜尋、核實、排版、格式檢查）交給自動化；所有關鍵決策（投不投、按不按送出）永遠留給人。系統做到「按送出鍵前一刻」，按下去的始終是我本人。</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl text-center group">
+                <div
+                    class="w-16 h-16 mx-auto bg-orange-500/20 rounded-full flex items-center justify-center text-2xl mb-6 text-orange-400 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="text-white font-bold mb-3" data-i18n="autojob_phil_2_title">誠實是架構，不是自律</h3>
+                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="autojob_phil_2_desc">
+                    防造假不靠意志力，而是把「誠實凌駕 ATS 分數」直接寫進系統規則：每一條履歷主張都會自動對照真實資歷庫核實，讓每一份產出天生就是誠實的。</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl text-center group">
+                <div
+                    class="w-16 h-16 mx-auto bg-neon-cyan/20 rounded-full flex items-center justify-center text-2xl mb-6 text-neon-cyan group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <h3 class="text-white font-bold mb-3" data-i18n="autojob_phil_3_title">缺口用做的，不是用寫的</h3>
+                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="autojob_phil_3_desc">
+                    系統盤點出履歷缺什麼，不是換個說法灌水，而是把缺口轉成待辦專案清單，做出真實成果後才寫進履歷。</p>
+            </div>
+        </div>
+
+        <!-- 建立歷程 -->
+        <div class="flex items-center gap-4 mb-8">
+            <h2 class="text-2xl font-bold text-white" data-i18n="autojob_timeline_title">建立歷程</h2>
+            <div class="h-1 flex-grow bg-gradient-to-r from-neon-cyan to-transparent rounded"></div>
+        </div>
+        <div class="relative pl-2 md:pl-8 space-y-8 mb-16">
+            <div class="absolute top-0 bottom-0 left-[23px] md:left-[43px] w-[2px] bg-gradient-to-b from-[#45A29E] to-[#66FCF1]">
+            </div>
+
+            <div class="relative pl-12 md:pl-16 group">
+                <div
+                    class="absolute left-[7px] md:left-[27px] top-0 w-8 h-8 rounded-full bg-[#1F2833] border-2 border-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.6)] flex items-center justify-center text-cyan-400 text-xs group-hover:bg-cyan-400 group-hover:text-[#1F2833] transition-all z-10">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <div class="glass-card bg-[#1F2833] p-6 rounded-xl border-l-4 border-cyan-400/60 border-y border-r border-white/5">
+                    <h3 class="text-white font-bold mb-2" data-i18n="autojob_step_1_title">Step 1｜建立資歷庫</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="autojob_step_1_desc">
+                        先把技能、認證、經歷、求職條件整理成一份結構化的「唯一事實來源」。之後所有的職缺評分、履歷客製、防造假核對，都以這份資歷庫為依據。</p>
+                </div>
+            </div>
+
+            <div class="relative pl-12 md:pl-16 group">
+                <div
+                    class="absolute left-[7px] md:left-[27px] top-0 w-8 h-8 rounded-full bg-[#1F2833] border-2 border-blue-400 shadow-[0_0_10px_rgba(96,165,250,0.6)] flex items-center justify-center text-blue-400 text-xs group-hover:bg-blue-400 group-hover:text-[#1F2833] transition-all z-10">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="glass-card bg-[#1F2833] p-6 rounded-xl border-l-4 border-blue-400/60 border-y border-r border-white/5">
+                    <h3 class="text-white font-bold mb-2" data-i18n="autojob_step_2_title">Step 2｜職缺搜尋與核實</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="autojob_step_2_desc">
+                        用 Claude Code 建立搜尋工作流：自動搜尋職缺、逐筆驗證「真實在招」、過濾簽證／國籍／兵役等硬性門檻（例如美國公民限定的職缺直接排除），再標上
+                        0–100 契合度評分寫入追蹤看板，把「該投誰、先投誰」變成一張排序好的行動清單。</p>
+                </div>
+            </div>
+
+            <div class="relative pl-12 md:pl-16 group">
+                <div
+                    class="absolute left-[7px] md:left-[27px] top-0 w-8 h-8 rounded-full bg-[#1F2833] border-2 border-purple-400 shadow-[0_0_10px_rgba(192,132,252,0.6)] flex items-center justify-center text-purple-400 text-xs group-hover:bg-purple-400 group-hover:text-[#1F2833] transition-all z-10">
+                    <i class="fa-solid fa-industry"></i>
+                </div>
+                <div class="glass-card bg-[#1F2833] p-6 rounded-xl border-l-4 border-purple-400/60 border-y border-r border-white/5">
+                    <h3 class="text-white font-bold mb-2" data-i18n="autojob_step_3_title">Step 3｜客製化產線</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="autojob_step_3_desc">
+                        貼上一則職缺，系統自動比對 JD 與資歷庫，產出量身訂做的履歷、求職信、職位分析與完整投遞包，並通過 ATS（履歷篩選系統）相容性檢查。</p>
+                </div>
+            </div>
+
+            <div class="relative pl-12 md:pl-16 group">
+                <div
+                    class="absolute left-[7px] md:left-[27px] top-0 w-8 h-8 rounded-full bg-[#1F2833] border-2 border-green-400 shadow-[0_0_10px_rgba(74,222,128,0.6)] flex items-center justify-center text-green-400 text-xs group-hover:bg-green-400 group-hover:text-[#1F2833] transition-all z-10">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="glass-card bg-[#1F2833] p-6 rounded-xl border-l-4 border-green-400/60 border-y border-r border-white/5">
+                    <h3 class="text-white font-bold mb-2" data-i18n="autojob_step_4_title">Step 4｜誠實防護</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="autojob_step_4_desc">
+                        在產線中內建反造假規則與誠信 QA：JD 要求但沒做過的技能不灌水，自動轉成待辦清單去真的補上。60+ 份客製履歷全數通過核實、零造假。</p>
+                </div>
+            </div>
+
+            <div class="relative pl-12 md:pl-16 group">
+                <div
+                    class="absolute left-[7px] md:left-[27px] top-0 w-8 h-8 rounded-full bg-[#1F2833] border-2 border-orange-400 shadow-[0_0_10px_rgba(251,146,60,0.6)] flex items-center justify-center text-orange-400 text-xs group-hover:bg-orange-400 group-hover:text-[#1F2833] transition-all z-10">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
+                <div class="glass-card bg-[#1F2833] p-6 rounded-xl border-l-4 border-orange-400/60 border-y border-r border-white/5">
+                    <h3 class="text-white font-bold mb-2" data-i18n="autojob_step_5_title">Step 5｜全自動化</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="autojob_step_5_desc">
+                        最後把整套流程掛上排程：每週一自動搜尋新職缺寫入看板、每月自動盤點新取得的認證更新資歷庫。系統從「工具」變成「不用人盯著也會自己長大的求職助理」。</p>
+                </div>
+            </div>
+
+            <div class="relative pl-12 md:pl-16 group">
+                <div
+                    class="absolute left-[7px] md:left-[27px] top-0 w-8 h-8 rounded-full bg-[#1F2833] border-2 border-pink-400 shadow-[0_0_10px_rgba(244,114,182,0.6)] flex items-center justify-center text-pink-400 text-xs group-hover:bg-pink-400 group-hover:text-[#1F2833] transition-all z-10">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <div class="glass-card bg-[#1F2833] p-6 rounded-xl border-l-4 border-pink-400/60 border-y border-r border-white/5">
+                    <h3 class="text-white font-bold mb-2" data-i18n="autojob_step_6_title">Step 6｜從缺口長出真專案</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="autojob_step_6_desc">
+                        系統盤點出「缺機器學習實作作品」的缺口，於是用碩論的真實風洞實驗資料（55 個實驗案例、288 個壓力測點）建立 ML 代理模型，達成 10
+                        個感測點重建全場 R²=0.84、全場預測 R²=0.99，所有數字經防洩漏交叉驗證與對抗式稽核 —— 缺口本身成了下一個真實專案的起點。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 成果總覽 -->
+        <div class="flex items-center gap-4 mb-8">
+            <h2 class="text-2xl font-bold text-white" data-i18n="autojob_summary_title">成果總覽</h2>
+            <div class="h-1 flex-grow bg-gradient-to-r from-neon-cyan to-transparent rounded"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6" data-i18n="autojob_summary_list">
+            <div class="glass-card rounded-xl p-4 flex gap-3">
+                <i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i>
+                <p class="text-gray-300 text-sm leading-relaxed"><strong class="text-white">端到端自動求職系統</strong> —
+                    「搜尋職缺 → 驗證真偽 → 追蹤管理 → 客製履歷 → 產出投遞包」一條龍自動化，已為 60+ 家企業產出職缺客製化履歷與求職信。</p>
+            </div>
+            <div class="glass-card rounded-xl p-4 flex gap-3">
+                <i class="fa-solid fa-circle-check text-blue-400 mt-1"></i>
+                <p class="text-gray-300 text-sm leading-relaxed"><strong class="text-white">自動化排程代理</strong> —
+                    每週自動搜職缺、每月自動盤點認證，系統自我更新。</p>
+            </div>
+            <div class="glass-card rounded-xl p-4 flex gap-3">
+                <i class="fa-solid fa-circle-check text-purple-400 mt-1"></i>
+                <p class="text-gray-300 text-sm leading-relaxed"><strong class="text-white">一鍵客製履歷與推薦信</strong> —
+                    自動比對 JD 與資歷庫，產出 CV、求職信、職位分析與投遞包並通過 ATS 檢查。</p>
+            </div>
+            <div class="glass-card rounded-xl p-4 flex gap-3">
+                <i class="fa-solid fa-circle-check text-green-400 mt-1"></i>
+                <p class="text-gray-300 text-sm leading-relaxed"><strong class="text-white">投遞前資格自動核實</strong> —
+                    簽證／國籍／兵役硬門檻自動過濾，不浪費時間在結構性不可能的申請。</p>
+            </div>
+            <div class="glass-card rounded-xl p-4 flex gap-3">
+                <i class="fa-solid fa-circle-check text-orange-400 mt-1"></i>
+                <p class="text-gray-300 text-sm leading-relaxed"><strong class="text-white">誠實防護機制</strong> —
+                    「誠實凌駕 ATS 分數」內建於流程，60+ 份客製履歷全數通過誠信 QA、零造假。</p>
+            </div>
+            <div class="glass-card rounded-xl p-4 flex gap-3">
+                <i class="fa-solid fa-circle-check text-pink-400 mt-1"></i>
+                <p class="text-gray-300 text-sm leading-relaxed"><strong class="text-white">從缺口長出真專案</strong> —
+                    真實風洞資料 ML 代理模型：10 感測點重建全場 R²=0.84、全場預測 R²=0.99。</p>
+            </div>
+        </div>
+    </div>
+    <script>const CERT_PAGE = 'autojob';</script>
+    <script src="cert-i18n.js"></script>
+</body>
+
+</html>

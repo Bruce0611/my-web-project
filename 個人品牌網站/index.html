@@ -5,6 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>郭正安 Bruce - 跨領域工程與 AI 專家</title>
+    <meta name="description"
+        content="郭正安（Bruce Kuo）— 淡江大學土木工程碩士，專注風洞實驗、CFD 模擬與機器學習應用，致力於將 AI 導入工程研發流程，打造跨領域的智慧化解決方案。">
+    <meta property="og:title" content="郭正安 Bruce - 跨領域工程與 AI 專家">
+    <meta property="og:description" content="淡江大學土木工程碩士，專注風洞實驗、CFD 模擬與機器學習應用，致力於將 AI 導入工程研發流程。">
+    <meta property="og:image" content="https://bruce0611.github.io/my-web-project/profile.png">
+    <meta property="og:url" content="https://bruce0611.github.io/my-web-project/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "郭正安",
+        "alternateName": "Bruce Kuo",
+        "jobTitle": "AI 應用研發工程師",
+        "description": "淡江大學土木工程碩士，專注風洞實驗、CFD 模擬與機器學習應用。",
+        "email": "mailto:brucekuo0611@gmail.com",
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "淡江大學"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/kuo-cheng-an-2a4854371/",
+            "https://github.com/Bruce0611",
+            "https://www.credly.com/users/cheng-kuo.08b67a5a/badges",
+            "https://learn.microsoft.com/zh-tw/users/26720854/achievements?tab=credentials-tab#badges-section"
+        ]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -15,7 +46,6 @@
                         'tech-bg': '#121212',
                         'neon-cyan': '#66FCF1',
                         'neon-dim': '#45A29E',
-                        'brand-ig': '#E1306C',
                         'brand-ig': '#E1306C',
                         'brand-yt': '#FF0000',
                         'brand-li': '#0077b5',
@@ -110,7 +140,7 @@
                         <span data-i18n="hero_title_1">跨領域工程</span> <br>
                         <span
                             class="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-blue-400 animate-pulse-slow"
-                            data-i18n="hero_title_2">AI 技術專家</span>
+                            data-i18n="hero_title_2">AI 應用研發</span>
                     </h1>
 
                     <div class="flex flex-col gap-2 mb-8 text-gray-300 font-mono text-sm md:text-base">
@@ -118,17 +148,52 @@
                             <i class="fa-solid fa-envelope w-6 text-neon-dim group-hover:text-neon-cyan"></i>
                             <a href="mailto:brucekuo0611@gmail.com">brucekuo0611@gmail.com</a>
                         </div>
-                        <div class="flex items-center hover:text-neon-cyan transition-colors cursor-pointer group">
-                            <i class="fa-solid fa-phone w-6 text-neon-dim group-hover:text-neon-cyan"></i>
-                            <span>+886 965-660-770</span>
+                    </div>
+
+                    <p class="text-lg text-gray-400 max-w-xl mb-2 leading-relaxed border-l-4 border-neon-dim pl-4"
+                        data-i18n="hero_desc_intro">
+                        具備土木底蘊與 AI 跨域實力的研發工程師，擅長將 CFD 與結構振動問題透過 BigQuery
+                        轉化為大規模分析模型。曾主導格柵優化專案，達成 25.5% 擾動降幅與 32% 減阻成效，具備將數值模擬導入 ML 進行自動化分析的核心實力。
+                    </p>
+                    <div id="hero-desc-more" class="hidden">
+                        <p class="text-lg text-gray-400 max-w-xl mb-2 leading-relaxed pl-4" data-i18n="hero_desc_more">
+                            持有 NVIDIA 與 Google Cloud 專業認證，精通運用 BigQuery ML 處理海量實驗數據並縮短特徵提取週期。熟練 Docker 與 GKE
+                            容器化部署，能將預測模型轉化為高可用服務，符合 MLOps 監控需求。具備 LLM 服務化基礎，能利用 Prompt 與 Agent
+                            框架開發工程數據轉譯助手，實現從原始數據到技術洞察的端到端自動化。<br><br>致力於將 AI
+                            導入工程工作流，憑藉嚴謹邏輯與溝通轉譯能力，為製程穩定與良率提升提供精準洞察，是具備開發下一代 AI 系統實力的高效協作者。
+                        </p>
+                    </div>
+                    <button type="button" id="hero-desc-toggle" onclick="toggleHeroDesc()"
+                        class="pl-4 mb-6 text-neon-cyan text-sm font-mono hover:underline inline-flex items-center gap-1">
+                        <span data-i18n="btn_read_more">閱讀更多</span>
+                        <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6 max-w-xl">
+                        <div class="glass-card rounded-xl p-3 text-center">
+                            <div class="text-2xl font-bold text-neon-cyan">32%</div>
+                            <div class="text-[11px] text-gray-400 mt-0.5" data-i18n="stat_drag">阻力係數降低</div>
+                        </div>
+                        <div class="glass-card rounded-xl p-3 text-center">
+                            <div class="text-2xl font-bold text-neon-cyan">25.5%</div>
+                            <div class="text-[11px] text-gray-400 mt-0.5" data-i18n="stat_perturbation">擾動強度抑制</div>
+                        </div>
+                        <div class="glass-card rounded-xl p-3 text-center">
+                            <div class="text-2xl font-bold text-neon-cyan">100+</div>
+                            <div class="text-[11px] text-gray-400 mt-0.5" data-i18n="stat_certs">認證與課程紀錄</div>
+                        </div>
+                        <div class="glass-card rounded-xl p-3 text-center">
+                            <div class="text-2xl font-bold text-neon-cyan">4.0</div>
+                            <div class="text-[11px] text-gray-400 mt-0.5" data-i18n="stat_gpa">碩士 GPA（滿分4.0）</div>
                         </div>
                     </div>
 
-                    <p class="text-lg text-gray-400 max-w-xl mb-8 leading-relaxed border-l-4 border-neon-dim pl-4"
-                        data-i18n="hero_desc">
-                        擅長運用多源數據分析與機器學習，解決複雜工程挑戰。<br>
-                        持續推動科技與工程的融合，致力於創造更智慧的解決方案。
-                    </p>
+                    <!-- TODO: 等待使用者提供 resume.pdf（放於 個人品牌網站/resume.pdf）後即可正常下載 -->
+                    <a href="resume.pdf" download
+                        class="inline-flex items-center gap-2 mb-6 px-6 py-3 border-2 border-neon-cyan text-neon-cyan font-bold rounded-full hover:bg-neon-cyan hover:text-tech-dark transition-all duration-300 shadow-[0_0_15px_rgba(102,252,241,0.2)]">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span data-i18n="btn_download_resume">下載履歷 PDF</span>
+                    </a>
 
                     <div class="grid grid-cols-2 gap-4 opacity-0 animate-fade-in-up delay-300">
                         <!-- LinkedIn -->
@@ -185,29 +250,141 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="glass-card p-8 rounded-2xl text-center group">
+                <div class="glass-card p-8 rounded-2xl text-center group cursor-pointer" id="about-card-cross"
+                    onclick="toggleAboutDetail('cross')">
                     <div
                         class="w-16 h-16 mx-auto bg-blue-500/20 rounded-full flex items-center justify-center text-3xl mb-6 text-blue-400 group-hover:scale-110 transition-transform">
                         🎯</div>
                     <h3 class="text-xl font-bold text-white mb-3" data-i18n="about_c1_title">跨領域整合</h3>
                     <p class="text-gray-400 text-sm leading-relaxed text-pretty" data-i18n="about_c1_desc">從土木工程到 AI
                         技術，無縫整合不同領域知識，打造獨特競爭力。</p>
+                    <i class="fa-solid fa-chevron-down text-xs text-gray-500 mt-4" id="about-chevron-cross"></i>
                 </div>
-                <div class="glass-card p-8 rounded-2xl text-center group">
+                <div class="glass-card p-8 rounded-2xl text-center group cursor-pointer" id="about-card-innovate"
+                    onclick="toggleAboutDetail('innovate')">
                     <div
                         class="w-16 h-16 mx-auto bg-orange-500/20 rounded-full flex items-center justify-center text-3xl mb-6 text-orange-400 group-hover:scale-110 transition-transform">
                         💡</div>
                     <h3 class="text-xl font-bold text-white mb-3" data-i18n="about_c2_title">創新思維</h3>
                     <p class="text-gray-400 text-sm leading-relaxed text-pretty" data-i18n="about_c2_desc">
                         運用創新思維與技術工具，有效解決複雜的工程與技術挑戰，提升工作效率。</p>
+                    <i class="fa-solid fa-chevron-down text-xs text-gray-500 mt-4" id="about-chevron-innovate"></i>
                 </div>
-                <div class="glass-card p-8 rounded-2xl text-center group">
+                <div class="glass-card p-8 rounded-2xl text-center group cursor-pointer" id="about-card-diverse"
+                    onclick="toggleAboutDetail('diverse')">
                     <div
                         class="w-16 h-16 mx-auto bg-neon-cyan/20 rounded-full flex items-center justify-center text-3xl mb-6 text-neon-cyan group-hover:scale-110 transition-transform">
                         🏆</div>
                     <h3 class="text-xl font-bold text-white mb-3" data-i18n="about_c3_title">多元發展</h3>
                     <p class="text-gray-400 text-sm leading-relaxed text-pretty" data-i18n="about_c3_desc">
                         歌唱冠軍、籃球隊長，在專業之外同樣追求卓越，具備團隊領導力。</p>
+                    <i class="fa-solid fa-chevron-down text-xs text-gray-500 mt-4" id="about-chevron-diverse"></i>
+                </div>
+            </div>
+
+            <!-- 點擊展開的詳細內容 -->
+            <div id="about-detail-panel" class="about-detail-collapsed">
+                <div class="about-detail-inner">
+                    <div class="glass-card rounded-2xl p-8 mt-6">
+                        <div id="about-detail-cross" class="hidden space-y-4">
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-circle text-[6px] text-blue-400 mt-2 shrink-0"></i>
+                                <p class="text-gray-300 text-sm leading-relaxed" data-i18n="about_detail_cross_1">
+                                    <strong class="text-white">土木力學根底，是我做「Sim-Ready」模擬的底氣</strong> —
+                                    模擬環境越貼近真實世界，訓練與驗證出來的結果才越有意義；憑藉結構力學、材料力學、流體力學的紮實基礎，我能從物理層面架設更接近真實的模擬環境，而不只是讓數字「跑得出來」。
+                                </p>
+                            </div>
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-circle text-[6px] text-blue-400 mt-2 shrink-0"></i>
+                                <p class="text-gray-300 text-sm leading-relaxed" data-i18n="about_detail_cross_2">
+                                    <strong class="text-white">把重複性研發流程自動化，把時間留給 AI 解不了的難題</strong> —
+                                    專研 AI 的同時，我會把高重複性的模擬／資料處理流程設計成自動化工作流，省下的研發時間拿去專注處理那些極端案例與邊界條件
+                                    —— AI 目前還無法自己搞定的部分。
+                                </p>
+                            </div>
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-circle text-[6px] text-blue-400 mt-2 shrink-0"></i>
+                                <p class="text-gray-300 text-sm leading-relaxed" data-i18n="about_detail_cross_3">
+                                    <strong class="text-white">看模擬結果，我在意的是有沒有物理意義，不是有沒有跑出數字</strong> —
+                                    以機器人模擬為例，多數人容易把「程式跑得出結果」當成答案；我更在意力學與流體力學等物理性質對訓練成效的實際影響，因為沒有物理意義的模擬，再多數字都是假的。
+                                </p>
+                            </div>
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-circle text-[6px] text-blue-400 mt-2 shrink-0"></i>
+                                <p class="text-gray-300 text-sm leading-relaxed" data-i18n="about_detail_cross_4">
+                                    <strong class="text-white">同時懂力學、懂 AI 的人不多，這個位置只有跨領域的人站得住</strong> —
+                                    從物理環境架設到自動化訓練流程，每一層都能同時顧到「夠真實」與「夠有效率」，這不是純軟體背景或純力學背景各自能做到的事。
+                                </p>
+                            </div>
+                        </div>
+                        <div id="about-detail-innovate" class="hidden space-y-4">
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-circle text-[6px] text-orange-400 mt-2 shrink-0"></i>
+                                <p class="text-gray-300 text-sm leading-relaxed" data-i18n="about_detail_innovate_1">
+                                    <strong class="text-white">想法一定要先過「市場關」，不是自己覺得酷就做</strong> —
+                                    每次冒出一個新想法，我會先驗證是不是真的有需求、有市場，通過這關才會往下走，避免把力氣花在自嗨的專案上。
+                                </p>
+                            </div>
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-circle text-[6px] text-orange-400 mt-2 shrink-0"></i>
+                                <p class="text-gray-300 text-sm leading-relaxed" data-i18n="about_detail_innovate_2">
+                                    <strong class="text-white">動工前，先跟 AI 把自己的盲點問清楚</strong> —
+                                    確認方向後，我會先與 AI 溝通、釐清自己不懂或沒想到的地方，把可能導致方向錯誤的風險先排除，避免砸了成本才發現走錯路。
+                                </p>
+                            </div>
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-circle text-[6px] text-orange-400 mt-2 shrink-0"></i>
+                                <p class="text-gray-300 text-sm leading-relaxed" data-i18n="about_detail_innovate_3">
+                                    <strong class="text-white">先出框架，再逐步驟訂目標、當場要求修到滿意為止</strong> —
+                                    方向確定後請 AI 架好初始框架，再一步步拆解每個步驟訂出明確目標，哪裡不對就當場要求修改，直到每一步都達到我要的標準。
+                                </p>
+                            </div>
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-circle text-[6px] text-orange-400 mt-2 shrink-0"></i>
+                                <p class="text-gray-300 text-sm leading-relaxed" data-i18n="about_detail_innovate_4">
+                                    <strong class="text-white">把驗證過的流程收斂成一個 skill，而且一定要自己先實測過</strong> —
+                                    每個步驟都滿意後，我會把整套流程寫成可重複使用的自動化 skill；寫完馬上實測產出是否符合當初設定的目標，不一致就回頭修，一致才算真正完成。
+                                </p>
+                            </div>
+                        </div>
+                        <div id="about-detail-diverse" class="hidden space-y-4">
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-trophy text-yellow-400 mt-1 shrink-0"></i>
+                                <p class="text-gray-300 text-sm leading-relaxed" data-i18n="about_detail_diverse_1">
+                                    <strong class="text-white">台中市西屯主委盃籃球賽 冠軍（2020）</strong> →
+                                    卓越團隊領導力，具備高壓節奏下穩定的決策韌性。
+                                </p>
+                            </div>
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-trophy text-yellow-400 mt-1 shrink-0"></i>
+                                <p class="text-gray-300 text-sm leading-relaxed" data-i18n="about_detail_diverse_2">
+                                    <strong class="text-white">滬尾之星歌唱組 冠軍（2025）</strong> →
+                                    具備自信公眾表達，以及高渲染力。
+                                </p>
+                            </div>
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-circle text-[6px] text-neon-cyan mt-2 shrink-0"></i>
+                                <p class="text-gray-300 text-sm leading-relaxed" data-i18n="about_detail_diverse_3">
+                                    <strong class="text-white">教學不只是教，而是把難懂的東西拆解到聽得懂</strong> —
+                                    擔任材料力學助教期間，建立標準化教學流程（SOP）提升授課效率，並運用實例將複雜的力學概念視覺化，直接反映在學生的理解力上。
+                                </p>
+                            </div>
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-circle text-[6px] text-neon-cyan mt-2 shrink-0"></i>
+                                <p class="text-gray-300 text-sm leading-relaxed" data-i18n="about_detail_diverse_4">
+                                    <strong class="text-white">全英語授課磨出來的跨文化溝通力</strong> —
+                                    擔任國際學生籃球教練，全程英語授課，同時培養學生自主當責（Accountability）的態度，建立起可複製的團隊協作機制。
+                                </p>
+                            </div>
+                            <div class="flex gap-3">
+                                <i class="fa-solid fa-circle text-[6px] text-neon-cyan mt-2 shrink-0"></i>
+                                <p class="text-gray-300 text-sm leading-relaxed" data-i18n="about_detail_diverse_5">
+                                    <strong class="text-white">連對象是長輩，也要顧好風險與體驗</strong> —
+                                    擔任體操教練與活動策劃，負責戶外活動的專案規劃與執行、風險控管，並針對高齡使用者優化課程體驗，展現同理心驅動的溝通能力。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -246,7 +423,8 @@
                     <div class="flex flex-wrap gap-2 mt-auto">
                         <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs">ANSYS Fluent</span>
                         <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs">OpenFOAM</span>
-                        <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs">Matlab</span>
+                        <a href="cert-mathworks.html" target="_blank" rel="noopener"
+                            class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs underline decoration-dotted hover:bg-green-500/30 transition-colors">Matlab</a>
                         <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs">Jupyter</span>
                     </div>
                 </div>
@@ -260,10 +438,13 @@
                         資料庫建構、自動化部署、雲端資安與合規、容器化叢集管理、AI 模型推論優化、機器學習。
                     </p>
                     <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-3 py-1 bg-neon-cyan/20 text-neon-cyan rounded-full text-xs">Python</span>
-                        <span class="px-3 py-1 bg-neon-cyan/20 text-neon-cyan rounded-full text-xs">Google Cloud
-                            Console</span>
-                        <span class="px-3 py-1 bg-neon-cyan/20 text-neon-cyan rounded-full text-xs">Database</span>
+                        <a href="cert-google.html" target="_blank" rel="noopener"
+                            class="px-3 py-1 bg-neon-cyan/20 text-neon-cyan rounded-full text-xs underline decoration-dotted hover:bg-neon-cyan/30 transition-colors">Python</a>
+                        <a href="cert-google.html" target="_blank" rel="noopener"
+                            class="px-3 py-1 bg-neon-cyan/20 text-neon-cyan rounded-full text-xs underline decoration-dotted hover:bg-neon-cyan/30 transition-colors">Google
+                            Cloud Console</a>
+                        <a href="cert-google.html" target="_blank" rel="noopener"
+                            class="px-3 py-1 bg-neon-cyan/20 text-neon-cyan rounded-full text-xs underline decoration-dotted hover:bg-neon-cyan/30 transition-colors">Database</a>
                     </div>
                 </div>
             </div>
@@ -278,7 +459,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Project 1 -->
-                <a href="#" target="_blank" class="glass-card p-0 rounded-2xl overflow-hidden group block">
+                <div class="glass-card p-0 rounded-2xl overflow-hidden group block">
                     <div class="h-48 bg-gray-800 relative overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0B0C10] to-transparent z-10"></div>
                         <div
@@ -293,16 +474,11 @@
                         <p class="text-gray-400 text-sm mb-6" data-i18n="proj_1_desc">
                             整合深度學習算法與結構動力學理論，自動辨識高層建築之氣動不穩定區位。透過即時優化流場控制機制（如主動減振器參數），有效降低阻力係數達 32% 並抑制 25.5% 擾動強度。
                         </p>
-                        <span
-                            class="inline-flex items-center text-white text-sm font-bold border-b border-neon-cyan pb-1 hover:text-neon-cyan transition">
-                            <span data-i18n="btn_view_project">查看專案詳情</span> <i
-                                class="fa-solid fa-arrow-right ml-2"></i>
-                        </span>
                     </div>
-                </a>
+                </div>
 
                 <!-- Project 2 -->
-                <a href="#" target="_blank" class="glass-card p-0 rounded-2xl overflow-hidden group block">
+                <div class="glass-card p-0 rounded-2xl overflow-hidden group block">
                     <div class="h-48 bg-gray-800 relative overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0B0C10] to-transparent z-10"></div>
                         <div
@@ -314,14 +490,30 @@
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-neon-cyan transition-colors"
                             data-i18n="proj_2_title">高精度 CFD 建築流場模擬與空氣動力優化平台</h3>
-                        <p class="text-gray-400 text-sm mb-6" data-i18n="proj_2_desc">運用大渦模擬 ($LES$)
+                        <p class="text-gray-400 text-sm mb-6" data-i18n="proj_2_desc">運用大渦模擬 (LES)
                             技術重建複雜大氣邊界層流場，深度解析建築物表面的壓力分布與尾流結構。透過數值模擬驗證各種氣動優化手段之功效，為抗風設計提供高精確度的數據支撐。
                         </p>
-                        <span
-                            class="inline-flex items-center text-white text-sm font-bold border-b border-neon-cyan pb-1 hover:text-neon-cyan transition">
-                            <span data-i18n="btn_view_project">查看專案詳情</span> <i
-                                class="fa-solid fa-arrow-right ml-2"></i>
-                        </span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <a href="project-autojob.html" target="_blank" rel="noopener"
+                    class="glass-card p-0 rounded-2xl overflow-hidden group block">
+                    <div class="h-48 bg-gray-800 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0B0C10] to-transparent z-10"></div>
+                        <div
+                            class="w-full h-full bg-purple-900/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-700">
+                            <i class="fa-solid fa-robot text-6xl text-purple-500/50"></i>
+                        </div>
+
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-neon-cyan transition-colors"
+                            data-i18n="proj_3_title">AI 自動求職系統</h3>
+                        <p class="text-gray-400 text-sm mb-6" data-i18n="proj_3_desc">
+                            用 Claude Code 打造端到端自動求職工作流：自動搜尋並核實職缺、客製履歷與求職信、排程自我更新。已為 60+
+                            家企業產出客製投遞包，全程內建反造假核實機制。
+                        </p>
                     </div>
                 </a>
             </div>
@@ -350,7 +542,7 @@
                         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-3">
                             <h3 class="text-xl font-bold text-white" data-i18n="exp_5_role">材料力學助教</h3>
                             <span class="text-gray-400 text-sm font-mono" data-i18n="exp_5_meta">2025 – 2026 |
-                                University Dept.</span>
+                                淡江大學</span>
                         </div>
                         <div class="text-gray-400 space-y-2 text-sm leading-relaxed" data-i18n="exp_5_desc">
                             <p>• 建立標準化教學流程 (SOP)，優化授課效率。</p>
@@ -378,10 +570,9 @@
                             <p>• 透過大型活動經營商業人脈。</p>
                         </div>
                         <div class="mt-2 pt-2 border-t border-white/5" data-i18n="exp_4_award">
-                            <a href="https://www.youtube.com" target="_blank"
-                                class="inline-flex items-center text-yellow-400 hover:text-yellow-300 text-sm font-bold transition-colors">
+                            <span class="inline-flex items-center text-yellow-400 text-sm font-bold">
                                 <i class="fa-solid fa-trophy mr-2"></i> 滬尾之星歌唱組 —— 第一名 (2025)
-                            </a>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -395,8 +586,8 @@
                         class="glass-card bg-[#1F2833] p-6 rounded-xl hover:shadow-[0_0_20px_rgba(102,252,241,0.3)] border border-white/5 transition-all">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-3">
                             <h3 class="text-xl font-bold text-white" data-i18n="exp_3_role">國際學生籃球教練</h3>
-                            <span class="text-gray-400 text-sm font-mono" data-i18n="exp_3_meta">2021 – 2025 | Freelance
-                                / Academy</span>
+                            <span class="text-gray-400 text-sm font-mono" data-i18n="exp_3_meta">2021 – 2025 |
+                                天母美國學校</span>
                         </div>
                         <div class="text-gray-400 space-y-2 text-sm leading-relaxed" data-i18n="exp_3_desc">
                             <p>• 執行 <span class="text-neon-cyan font-semibold">全英語授課 (English-Only
@@ -446,10 +637,9 @@
                             <p>• 協助制定訓練 SOP，提升團隊執行效率。</p>
                         </div>
                         <div class="mt-2 pt-2 border-t border-white/5" data-i18n="exp_1_award">
-                            <a href="https://www.facebook.com" target="_blank"
-                                class="inline-flex items-center text-yellow-400 hover:text-yellow-300 text-sm font-bold transition-colors">
+                            <span class="inline-flex items-center text-yellow-400 text-sm font-bold">
                                 <i class="fa-solid fa-trophy mr-2"></i> 台中市西屯主委盃籃球賽 —— 第一名 (2020)
-                            </a>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -470,7 +660,7 @@
                         <span class="text-blue-400 font-bold">GPA 4.0/4.0</span>
                     </div>
                     <p class="text-gray-500 mb-4" data-i18n="edu_1_school">淡江大學 | 2025 - 2026</p>
-                    <p class="text-sm text-gray-400" data-i18n="edu_1_desc">研究 : 流場控制與振動優化系統<br>GPA: 4.0/4.0</p>
+                    <p class="text-sm text-gray-400" data-i18n="edu_1_desc">研究 : 流場控制與振動優化系統</p>
                 </div>
                 <!-- Education Item 2 -->
                 <div class="glass-card p-8 rounded-xl border-l-4 border-cyan-600">
@@ -479,7 +669,7 @@
                         <span class="text-cyan-400 font-bold">GPA 3.45/4.0</span>
                     </div>
                     <p class="text-gray-500 mb-4" data-i18n="edu_2_school">淡江大學 | 2021 - 2025</p>
-                    <p class="text-sm text-gray-400" data-i18n="edu_2_desc">熱舞社美軒、專題競賽優勝<br>GPA: 3.45/4.0</p>
+                    <p class="text-sm text-gray-400" data-i18n="edu_2_desc">熱舞社美軒、專題競賽優勝</p>
                 </div>
             </div>
         </section>
@@ -492,22 +682,78 @@
                     <div class="h-1 flex-grow bg-gray-800 rounded"></div>
                 </div>
                 <div class="space-y-4">
-                    <div
+                    <a href="cert-nvidia.html" target="_blank" rel="noopener"
                         class="bg-[#161b22] p-4 rounded-lg border border-gray-800 flex items-center gap-4 hover:border-neon-cyan transition-colors">
-                        <i class="fa-solid fa-certificate text-yellow-500 text-xl"></i>
-                        <div>
-                            <h4 class="text-white font-bold text-sm" data-i18n="cert_1_name">NVIDIA 深度學習認證</h4>
-                            <p class="text-xs text-gray-500" data-i18n="cert_1_desc">深度學習技術認證</p>
+                        <i class="fa-solid fa-microchip text-green-400 text-xl"></i>
+                        <div class="flex-1">
+                            <h4 class="text-white font-bold text-sm" data-i18n="cert_nvidia_name">NVIDIA 深度學習認證</h4>
+                            <p class="text-xs text-gray-500" data-i18n="cert_nvidia_desc">Transformer NLP、Jetson
+                                Nano、Isaac Sim 機器人模擬等，4 張正式證書．16 門課程完課</p>
                         </div>
-                    </div>
-                    <div
+                        <i class="fa-solid fa-arrow-up-right-from-square text-gray-600 text-xs" aria-hidden="true"></i>
+                    </a>
+                    <a href="cert-google.html" target="_blank" rel="noopener"
                         class="bg-[#161b22] p-4 rounded-lg border border-gray-800 flex items-center gap-4 hover:border-neon-cyan transition-colors">
                         <i class="fa-solid fa-id-card text-neon-cyan text-xl"></i>
-                        <div>
-                            <h4 class="text-white font-bold text-sm" data-i18n="cert_2_name">GOOGLE SKILL 認證</h4>
-                            <p class="text-xs text-gray-500" data-i18n="cert_2_desc">國家高考及格</p>
+                        <div class="flex-1">
+                            <h4 class="text-white font-bold text-sm" data-i18n="cert_google_name">GOOGLE SKILL 認證</h4>
+                            <p class="text-xs text-gray-500" data-i18n="cert_google_desc">數位人才探索計畫結業證書．橫跨 Cloud
+                                Skills Boost、Credly、Skillshop 共 72 項認證與課程紀錄（BigQuery、Kubernetes、Gemini for
+                                Workspace 等）</p>
                         </div>
-                    </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-gray-600 text-xs" aria-hidden="true"></i>
+                    </a>
+                    <a href="cert-anthropic.html" target="_blank" rel="noopener"
+                        class="bg-[#161b22] p-4 rounded-lg border border-gray-800 flex items-center gap-4 hover:border-neon-cyan transition-colors">
+                        <i class="fa-solid fa-wand-magic-sparkles text-orange-400 text-xl"></i>
+                        <div class="flex-1">
+                            <h4 class="text-white font-bold text-sm" data-i18n="cert_anthropic_name">ANTHROPIC ACADEMY
+                                認證</h4>
+                            <p class="text-xs text-gray-500" data-i18n="cert_anthropic_desc">Claude Code 101、Model
+                                Context Protocol (MCP) 官方課程完課</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-gray-600 text-xs" aria-hidden="true"></i>
+                    </a>
+                    <a href="cert-microsoft.html" target="_blank" rel="noopener"
+                        class="bg-[#161b22] p-4 rounded-lg border border-gray-800 flex items-center gap-4 hover:border-neon-cyan transition-colors">
+                        <i class="fa-brands fa-microsoft text-blue-400 text-xl"></i>
+                        <div class="flex-1">
+                            <h4 class="text-white font-bold text-sm" data-i18n="cert_microsoft_name">MICROSOFT 認證</h4>
+                            <p class="text-xs text-gray-500" data-i18n="cert_microsoft_desc">Microsoft Learn 個人學習檔案，2
+                                座獎盃．12 個徽章（Azure、AI 代理程式開發等）</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-gray-600 text-xs" aria-hidden="true"></i>
+                    </a>
+                    <a href="cert-mathworks.html" target="_blank" rel="noopener"
+                        class="bg-[#161b22] p-4 rounded-lg border border-gray-800 flex items-center gap-4 hover:border-neon-cyan transition-colors">
+                        <i class="fa-solid fa-chart-line text-red-400 text-xl"></i>
+                        <div class="flex-1">
+                            <h4 class="text-white font-bold text-sm" data-i18n="cert_mathworks_name">MATHWORKS 認證</h4>
+                            <p class="text-xs text-gray-500" data-i18n="cert_mathworks_desc">Deep Learning Onramp
+                                課程證書</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-gray-600 text-xs" aria-hidden="true"></i>
+                    </a>
+                    <a href="cert-tku.html" target="_blank" rel="noopener"
+                        class="bg-[#161b22] p-4 rounded-lg border border-gray-800 flex items-center gap-4 hover:border-neon-cyan transition-colors">
+                        <i class="fa-solid fa-graduation-cap text-cyan-400 text-xl"></i>
+                        <div class="flex-1">
+                            <h4 class="text-white font-bold text-sm" data-i18n="cert_tku_name">淡江大學 AI 創智學院研習證明</h4>
+                            <p class="text-xs text-gray-500" data-i18n="cert_tku_desc">Azure AI 工程師認證課程、多模態 AI
+                                應用實作工作坊</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-gray-600 text-xs" aria-hidden="true"></i>
+                    </a>
+                    <a href="cert-other.html" target="_blank" rel="noopener"
+                        class="bg-[#161b22] p-4 rounded-lg border border-gray-800 flex items-center gap-4 hover:border-neon-cyan transition-colors">
+                        <i class="fa-solid fa-building-columns text-purple-400 text-xl"></i>
+                        <div class="flex-1">
+                            <h4 class="text-white font-bold text-sm" data-i18n="cert_other_name">其他機構課程</h4>
+                            <p class="text-xs text-gray-500" data-i18n="cert_other_desc">資策會「駕馭 AI 新浪潮」結業證書、AI
+                                商務應用與智慧教育平台工作坊</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-gray-600 text-xs" aria-hidden="true"></i>
+                    </a>
                 </div>
             </section>
 
@@ -546,22 +792,25 @@
                     class="glass-card px-8 py-4 rounded-lg flex items-center justify-center gap-3 hover:text-neon-cyan transition">
                     <i class="fa-solid fa-envelope"></i> brucekuo0611@gmail.com
                 </a>
-                <div class="glass-card px-8 py-4 rounded-lg flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-phone"></i> +886 965-660-770
-                </div>
+                <!-- TODO: 等待使用者提供 resume.pdf（放於 個人品牌網站/resume.pdf）後即可正常下載 -->
+                <a href="resume.pdf" download
+                    class="glass-card px-8 py-4 rounded-lg flex items-center justify-center gap-3 hover:text-neon-cyan transition">
+                    <i class="fa-solid fa-file-arrow-down"></i> <span data-i18n="btn_download_resume">下載履歷 PDF</span>
+                </a>
             </div>
 
             <div class="flex justify-center gap-8 text-2xl text-gray-500 mb-8">
-                <a href="https://github.com/Bruce0611?tab=repositories" target="_blank"
-                    class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/kuo-cheng-an-2a4854371/" target="_blank"
-                    class="hover:text-blue-500 transition"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/scl_hin_11/" target="_blank"
-                    class="hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.youtube.com/@scl_hin_11/videos" target="_blank"
-                    class="hover:text-red-500 transition"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://github.com/Bruce0611?tab=repositories" target="_blank" aria-label="GitHub"
+                    class="hover:text-white transition"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/kuo-cheng-an-2a4854371/" target="_blank" aria-label="LinkedIn"
+                    class="hover:text-blue-500 transition"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/scl_hin_11/" target="_blank" aria-label="Instagram"
+                    class="hover:text-pink-500 transition"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/@scl_hin_11/videos" target="_blank" aria-label="YouTube"
+                    class="hover:text-red-500 transition"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
             </div>
 
+            <p class="text-xs text-gray-600 font-mono">最後更新 2026/07</p>
 
         </div>
     </footer>
