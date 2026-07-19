@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NVIDIA 深度學習認證 - 郭正安 Bruce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'tech-dark': '#0B0C10',
+                        'neon-cyan': '#66FCF1',
+                        'neon-dim': '#45A29E',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'Inter', 'sans-serif'],
+                        mono: ['Roboto Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="antialiased bg-tech-dark text-gray-300">
+    <div class="max-w-5xl mx-auto px-6 py-12">
+        <div class="flex items-center justify-between mb-8">
+            <a href="index.html#certifications"
+                class="inline-flex items-center gap-2 text-neon-cyan hover:text-white font-mono text-sm transition-colors">
+                <i class="fa-solid fa-arrow-left"></i> <span data-i18n="back_home">返回首頁</span>
+            </a>
+            <div class="lang-switch">
+                <span class="lang-opt active" id="lang-tw" onclick="setCertLanguage('zh')">繁</span>
+                <span class="text-gray-600">/</span>
+                <span class="lang-opt" id="lang-en" onclick="setCertLanguage('en')">EN</span>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-4 mb-4">
+            <i class="fa-solid fa-microchip text-green-400 text-3xl"></i>
+            <h1 class="text-3xl md:text-4xl font-bold text-white" data-i18n="nvidia_h1">NVIDIA 深度學習認證</h1>
+        </div>
+        <p class="text-gray-400 mb-6" data-i18n="nvidia_intro">以下為所有正式證書與課程完課紀錄的原始截圖，皆為 cheng an kuo（郭正安）本人取得。</p>
+
+        <div class="glass-card rounded-xl p-5 mb-10">
+            <a href="https://learn.nvidia.com/my-learning" target="_blank" rel="noopener"
+                class="inline-flex items-center justify-center gap-2 px-5 py-2.5 border border-gray-700 text-gray-400 rounded-full text-sm font-bold hover:border-green-400 hover:text-green-400 transition-all">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="nvidia_link1">前往 NVIDIA Deep
+                    Learning Institute（需登入查看個人紀錄）</span>
+            </a>
+        </div>
+
+        <h2 class="text-lg font-bold text-green-400 mb-4" data-i18n="nvidia_h2_1">正式證書（Certificate of Competency）</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/nvidia/cert-transformer-nlp.png" target="_blank" rel="noopener"><img src="certs/nvidia/cert-transformer-nlp.png" class="w-full" alt="建造以 Transformer 為基礎的自然語言處理應用" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="nvidia_cap_1">建造以 Transformer 為基礎的自然語言處理應用 —
+                    2026/06/11</figcaption>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/nvidia/cert-deep-learning.png" target="_blank" rel="noopener"><img src="certs/nvidia/cert-deep-learning.png" class="w-full" alt="Getting Started with Deep Learning" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="nvidia_cap_2">Getting Started with Deep
+                    Learning — 2026/05/30</figcaption>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/nvidia/cert-jetson-nano.png" target="_blank" rel="noopener"><img src="certs/nvidia/cert-jetson-nano.png" class="w-full" alt="Getting Started with AI on Jetson Nano" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="nvidia_cap_3">Getting Started with AI on
+                    Jetson Nano — 2025/09/20</figcaption>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/nvidia/cert-disaster-risk-monitoring.png" target="_blank" rel="noopener"><img src="certs/nvidia/cert-disaster-risk-monitoring.png" class="w-full"
+                    alt="Disaster Risk Monitoring Using Satellite Imagery" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="nvidia_cap_4">Disaster Risk Monitoring Using
+                    Satellite Imagery（NVIDIA × UNITAR/UNOSAT）— 2025/10/05</figcaption>
+            </figure>
+        </div>
+
+        <h2 class="text-lg font-bold text-green-400 mb-4" data-i18n="nvidia_h2_2">100% 完課紀錄．Isaac Sim / ROS
+            系列（無獨立證書）</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/nvidia/course-isaac-ros-intro.png" target="_blank" rel="noopener"><img src="certs/nvidia/course-isaac-ros-intro.png" class="w-full"
+                    alt="An Introduction to AI-Based Robot Development With Isaac ROS" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="nvidia_cap_5">An Introduction to AI-Based
+                    Robot Development With Isaac ROS</figcaption>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/nvidia/course-synthetic-data.png" target="_blank" rel="noopener"><img src="certs/nvidia/course-synthetic-data.png" class="w-full"
+                    alt="Synthetic Data Generation for Perception Model Training in Isaac Sim" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="nvidia_cap_6">Synthetic Data Generation for
+                    Perception Model Training in Isaac Sim</figcaption>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/nvidia/course-sil-isaac-sim.png" target="_blank" rel="noopener"><img src="certs/nvidia/course-sil-isaac-sim.png" class="w-full"
+                    alt="Developing Robots With Software-in-the-Loop (SIL) in Isaac Sim" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="nvidia_cap_7">Developing Robots With
+                    Software-in-the-Loop (SIL) in Isaac Sim</figcaption>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/nvidia/course-hil-ros2.png" target="_blank" rel="noopener"><img src="certs/nvidia/course-hil-ros2.png" class="w-full"
+                    alt="Leveraging ROS 2 and Hardware-in-the-Loop (HIL) in Isaac Sim" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="nvidia_cap_8">Leveraging ROS 2 and
+                    Hardware-in-the-Loop (HIL) in Isaac Sim</figcaption>
+            </figure>
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/nvidia/course-ingesting-robot-assets.png" target="_blank" rel="noopener"><img src="certs/nvidia/course-ingesting-robot-assets.png" class="w-full"
+                    alt="Ingesting Robot Assets and Simulating Your Robot in Isaac Sim" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="nvidia_cap_9">Ingesting Robot Assets and
+                    Simulating Your Robot in Isaac Sim</figcaption>
+            </figure>
+        </div>
+
+        <h2 class="text-lg font-bold text-green-400 mb-4" data-i18n="nvidia_h2_3">NVIDIA DLI
+            短課完課紀錄（100% 完課，平台未核發個別證書）</h2>
+        <div class="grid grid-cols-1 gap-6 mb-6">
+            <figure class="glass-card rounded-xl overflow-hidden">
+                <a href="certs/nvidia/dli-short-courses-list.png" target="_blank" rel="noopener"><img src="certs/nvidia/dli-short-courses-list.png" class="w-full" alt="NVIDIA DLI 短課完課紀錄清單" loading="lazy"></a>
+                <figcaption class="p-3 text-xs text-gray-400" data-i18n="nvidia_cap_10">Generative AI
+                    Explained、Agentic AI Explained、Building A Brain in 10 Minutes 等 11 門短課</figcaption>
+            </figure>
+        </div>
+    </div>
+    <script>const CERT_PAGE = 'nvidia';</script>
+    <script src="cert-i18n.js"></script>
+</body>
+
+</html>

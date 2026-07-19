@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MICROSOFT 認證 - 郭正安 Bruce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'tech-dark': '#0B0C10',
+                        'neon-cyan': '#66FCF1',
+                        'neon-dim': '#45A29E',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'Inter', 'sans-serif'],
+                        mono: ['Roboto Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="antialiased bg-tech-dark text-gray-300">
+    <div class="max-w-5xl mx-auto px-6 py-12">
+        <div class="flex items-center justify-between mb-8">
+            <a href="index.html#certifications"
+                class="inline-flex items-center gap-2 text-neon-cyan hover:text-white font-mono text-sm transition-colors">
+                <i class="fa-solid fa-arrow-left"></i> <span data-i18n="back_home">返回首頁</span>
+            </a>
+            <div class="lang-switch">
+                <span class="lang-opt active" id="lang-tw" onclick="setCertLanguage('zh')">繁</span>
+                <span class="text-gray-600">/</span>
+                <span class="lang-opt" id="lang-en" onclick="setCertLanguage('en')">EN</span>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-4 mb-4">
+            <i class="fa-brands fa-microsoft text-blue-400 text-3xl"></i>
+            <h1 class="text-3xl md:text-4xl font-bold text-white" data-i18n="microsoft_h1">MICROSOFT 認證</h1>
+        </div>
+        <p class="text-gray-400 mb-6" data-i18n="microsoft_intro">Microsoft Learn 個人學習檔案，郭正安本人取得，公開頁面免登入即可查看。</p>
+
+        <div class="glass-card rounded-xl p-5 mb-10">
+            <a href="https://learn.microsoft.com/zh-tw/users/26720854/achievements?tab=credentials-tab#badges-section"
+                target="_blank" rel="noopener"
+                class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-neon-cyan/10 border border-neon-cyan text-neon-cyan rounded-full text-sm font-bold hover:bg-neon-cyan hover:text-tech-dark transition-all">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="microsoft_link1">在 Microsoft
+                    Learn 查看完整檔案（免登入）</span>
+            </a>
+        </div>
+
+        <h2 class="text-lg font-bold text-neon-cyan mb-4" data-i18n="microsoft_h2_1">獎盃（Trophies）</h2>
+        <ul class="text-gray-300 text-sm space-y-2 leading-relaxed list-disc pl-5 mb-10">
+            <li data-i18n="microsoft_trophy_1">使用 Microsoft Foundry（Microsoft 應用技能）建立 AI 代理 — 完成時間 2026/05/11</li>
+            <li data-i18n="microsoft_trophy_2">Azure 資料庫管理簡介 — 完成時間 2026/05/10</li>
+        </ul>
+
+        <h2 class="text-lg font-bold text-neon-cyan mb-4" data-i18n="microsoft_h2_2">徽章（Badges，共 12 個）</h2>
+        <ul class="text-gray-300 text-sm space-y-2 leading-relaxed list-disc pl-5 sm:columns-2 gap-x-6">
+            <li data-i18n="microsoft_badge_1">設定儲存體帳戶 — 2026/05/13</li>
+            <li data-i18n="microsoft_badge_2">設定虛擬網路 — 2026/05/13</li>
+            <li data-i18n="microsoft_badge_3">了解 Microsoft Entra ID — 2026/05/13</li>
+            <li data-i18n="microsoft_badge_4">Azure Cloud Shell 簡介 — 2026/05/13</li>
+            <li data-i18n="microsoft_badge_5">使用 Azure Content Understanding 建立多模態分析解決方案 — 2026/05/12</li>
+            <li data-i18n="microsoft_badge_6">分析影像 — 2026/05/12</li>
+            <li data-i18n="microsoft_badge_7">在 Foundry 工具中使用 Azure 語言分析文字 — 2026/05/11</li>
+            <li data-i18n="microsoft_badge_8">開始使用 Azure 上的 AI 代理程式開發 — 2026/05/11</li>
+            <li data-i18n="microsoft_badge_9">Use imperative development techniques for canvas apps in Power Apps —
+                2026/05/10</li>
+            <li data-i18n="microsoft_badge_10">準備在 Azure 上維護以 SQL Server 為基礎的資料庫 — 2026/05/10</li>
+            <li data-i18n="microsoft_badge_11">生成式 AI 和代理程式簡介 — 2026/05/10</li>
+            <li data-i18n="microsoft_badge_12">AI 概念簡介 — 2026/05/07</li>
+        </ul>
+    </div>
+    <script>const CERT_PAGE = 'microsoft';</script>
+    <script src="cert-i18n.js"></script>
+</body>
+
+</html>
